@@ -3,92 +3,366 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahara Agro Chemicals | Leading Manufacturer of Agri-Inputs</title>
+    <title>Sahara Agro Chemicals | Leading the Green Revolution</title>
     <style>
-        :root { --primary: #2e3192; --accent: #4caf50; --dark: #1e1e24; --light: #f4f6f9; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
-        header { background: #ffffff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-        .logo-text { font-size: 24px; font-weight: bold; color: var(--primary); letter-spacing: 1px; }
-        .logo-accent { color: var(--accent); }
-        nav a { margin-left: 20px; text-decoration: none; color: var(--dark); font-weight: 600; transition: 0.3s; }
-        nav a:hover { color: var(--accent); }
-        .hero { background: linear-gradient(135deg, rgba(46,49,146,0.9), rgba(76,175,80,0.8)), url('https://unsplash.com') no-repeat center center/cover; padding: 100px 5%; text-align: center; color: white; }
-        .hero h1 { font-size: 42px; margin-bottom: 15px; }
-        .hero p { font-size: 18px; max-width: 700px; margin: 0 auto 30px; }
-        .section { padding: 60px 5%; text-align: center; }
-        .section h2 { font-size: 32px; margin-bottom: 40px; color: var(--primary); position: relative; }
-        .section h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--accent); margin: 10px auto 0; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 20px; }
-        .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid var(--primary); transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); border-top-color: var(--accent); }
-        .card h3 { margin: 15px 0 10px; color: var(--dark); }
-        .btn { display: inline-block; padding: 10px 20px; background: var(--accent); color: white; text-decoration: none; border-radius: 4px; font-weight: bold; margin-top: 15px; transition: 0.3s; }
-        .btn:hover { background: #388e3c; }
-        .contact-info { font-size: 18px; margin: 15px 0; }
-        footer { background: var(--dark); color: white; text-align: center; padding: 20px; margin-top: 40px; font-size: 14px; }
+        :root {
+            --primary: #123321; /* Deep Brand Green */
+            --accent: #d96b18;  /* Vibrant Orange Accent */
+            --text-dark: #222222;
+            --bg-light: #f9fbf9;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+
+        /* Top Navigation Header */
+        header {
+            background: var(--white);
+            padding: 12px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-area img {
+            height: 55px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            margin-left: 22px;
+            text-decoration: none;
+            color: #444444;
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+            transition: 0.2s;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a.active-link {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        /* Premium Hero Banner Section */
+        .hero {
+            background: linear-gradient(rgba(18, 51, 33, 0.75), rgba(18, 51, 33, 0.6)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            padding: 110px 8%;
+            color: var(--white);
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .btn-orange {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--white);
+            text-decoration: none;
+            padding: 12px 28px;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+        }
+
+        .btn-orange:hover {
+            background-color: #bd5910;
+            transform: translateY(-1px);
+        }
+
+        /* Solutions Layout Grid */
+        .solutions-section {
+            padding: 50px 6%;
+            text-align: center;
+        }
+
+        .solutions-section h2 {
+            font-size: 26px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 35px;
+            font-weight: 800;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* Product Showcase Cards */
+        .product-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+            border: 1px solid #eaeaea;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            text-align: left;
+        }
+
+        .badge-orange {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background-color: var(--accent);
+            color: var(--white);
+            font-size: 10px;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 10;
+        }
+
+        .image-wrapper {
+            background-color: #fcfcfc;
+            padding: 20px;
+            text-align: center;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .image-wrapper img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .card-details {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .stars {
+            color: #ffb400;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .product-card h3 {
+            font-size: 15px;
+            color: #111111;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            min-height: 44px;
+        }
+
+        .product-card p {
+            font-size: 13px;
+            color: #666666;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .view-details-link {
+            font-size: 11px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            display: inline-block;
+        }
+
+        .card-action-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            border-top: 1px solid #f4f4f4;
+            padding-top: 15px;
+        }
+
+        .btn-dark-enquiry {
+            background-color: #13283c; /* Deep Slate Blue */
+            color: var(--white);
+            text-decoration: none;
+            padding: 8px 16px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 3px;
+            transition: 0.2s;
+        }
+
+        .btn-dark-enquiry:hover {
+            background-color: #0b1a29;
+        }
+
+        .read-more-text {
+            font-size: 11px;
+            color: #333333;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .read-more-text:hover {
+            color: var(--accent);
+        }
+
+        /* Middle Call-To-Action Ribbon */
+        .cta-ribbon {
+            background-color: #0e2233; /* Corporate Slate */
+            color: var(--white);
+            padding: 22px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .cta-ribbon h2 {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-ribbon p {
+            font-size: 13px;
+            opacity: 0.8;
+            margin-top: 2px;
+        }
+
+        /* Layout Footer Frame */
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 35px 6% 20px;
+            font-size: 13px;
+            border-top: 4px solid var(--accent);
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+
+        .footer-col h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            color: #a4cfa4;
+        }
+
+        .footer-col p {
+            opacity: 0.85;
+            font-size: 13px;
+        }
+
+        .copyright-bar {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 15px;
+            text-align: center;
+            font-size: 11px;
+            opacity: 0.6;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Header Navigation Frame -->
     <header>
-        <div class="logo-text">SAHARA <span class="logo-accent">AGRO</span></div>
+        <div class="logo-area">
+            <!-- Ensure your logo.png is uploaded directly inside your github folder root -->
+            <img src="logo.png" alt="Sahara Agro Chemicals Logo" onerror="this.src='https://placeholder.com'">
+        </div>
         <nav>
-            <a href="#home">Home</a>
+            <a href="#home" class="active-link">Home</a>
             <a href="#about">About Us</a>
             <a href="#products">Products</a>
+            <a href="#innovation">Innovation</a>
+            <a href="#network">Dealer Network</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <div id="home" class="hero">
-        <h1>Innovative Agro Chemical Solutions</h1>
-        <p>Empowering global agriculture with high-grade, premium quality fertilizers, crop protection solutions, and performance enhancers designed for sustainable farming yields.</p>
-        <a href="#products" class="btn" style="background: white; color: var(--primary);">Explore Product Catalog</a>
-    </div>
-
-    <div id="about" class="section">
-        <h2>About Sahara Agro Chemicals</h2>
-        <p style="max-width: 800px; margin: 0 auto; font-size: 16px; color: #555;">
-            Sahara Agro Chemicals stands at the forefront of agricultural innovation. We specialize in manufacturing scientifically back-tested chemical formulations that shield investments, augment soil profiles, and catalyze crop yields. Driven by strict standards of environmental safety and processing excellence, we provide Indian farmers and enterprise distribution rings with modern chemical dependability.
-        </p>
-    </div>
-
-    <div id="products" class="section" style="background-color: #ffffff;">
-        <h2>Our Core Showcase Catalog</h2>
-        <div class="grid">
-            <div class="card">
-                <div style="font-size: 40px;">🌱</div>
-                <h3>Premium Bio-Stimulants</h3>
-                <p>Advanced formulas engineered to speed up metabolic loops, maximizing root penetration and nutrient utilization profiles.</p>
-                <a href="https://wa.me/+917620792897" class="btn" target="_blank">Inquire via WhatsApp</a>
-            </div>
-            <div class="card">
-                <div style="font-size: 40px;">🛡️</div>
-                <h3>High-Efficiency Crop Protection</h3>
-                <p>Targeted pest and fungal barriers created to minimize crop loss patterns while maintaining safe harvest chemical footprints.</p>
-                <a href="https://wa.me/+917620792897" class="btn" target="_blank">Inquire via WhatsApp</a>
-            </div>
-            <div class="card">
-                <div style="font-size: 40px;">🧪</div>
-                <h3>Water-Soluble NPK Blends</h3>
-                <p>Pure, sediment-free liquid and crystalline compounds matched precisely for micro-irrigation and drip-fertigation configurations.</p>
-                <a href="https://wa.me/+917620792897" class="btn" target="_blank">Inquire via WhatsApp</a>
-            </div>
+    <!-- Marketing Hero Unit -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transforming Agriculture.<br>Empowering Farmers.</h1>
+            <p>Explore Our Premium Agro-solutions built specifically to maximize crop yields across standard landscapes.</p>
+            <a href="#contact" class="btn-orange">Get Consultation</a>
         </div>
-    </div>
+    </section>
 
-    <div id="contact" class="section">
-        <h2>Corporate Communication Hub</h2>
-        <p class="contact-info">📍 <strong>Mailing Unit:</strong> Maharashtra, India</p>
-        <p class="contact-info">📧 <strong>Dealership & Digital Queries:</strong> hr.sahara.agro@gmail.com</p>
-        <p class="contact-info">💼 <strong>Human Resources Team:</strong> hr.sahara.agro@gmail.com</p>
-        <a href="mailto:digital.sahara.agro@://gmail.com" class="btn">Send Formal Email Proposal</a>
-    </div>
+    <!-- Showcase Grid Structure -->
+    <section id="products" class="solutions-section">
+        <h2>Featured Solutions</h2>
+        <div class="grid-container">
 
-    <footer>
-        <p>&copy; 2026 Sahara Agro Chemicals. All Rights Reserved. | Monitored by Corporate Digital Administration.</p>
-    </footer>
-
-</body>
-</html>
+            <!-- Card Unit 1 -->
+            <div class="product-card">
