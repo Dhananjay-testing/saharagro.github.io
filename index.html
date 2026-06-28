@@ -173,33 +173,22 @@
             z-index: 10;
         }
 
-        /* Native Colored Shape Container (No External Images Needed) */
+        /* Container using your local logo.png so it never goes blank */
         .image-wrapper {
-            background: linear-gradient(180deg, #f7f9f7 0%, #eef2ee 100%);
+            background-color: #f7f9f7;
             padding: 20px;
             text-align: center;
             height: 220px;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             border-bottom: 1px solid #e2e8e2;
         }
 
-        .product-icon {
-            font-size: 55px;
-            margin-bottom: 10px;
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
-        }
-
-        .product-mock-tag {
-            background-color: var(--primary);
-            color: white;
-            font-size: 11px;
-            font-weight: bold;
-            padding: 3px 15px;
-            border-radius: 20px;
-            text-transform: uppercase;
+        .image-wrapper img {
+            max-height: 80%;
+            max-width: 80%;
+            object-fit: contain;
         }
 
         .card-details {
@@ -342,7 +331,7 @@
     <!-- Header Navigation Frame -->
     <header>
         <div class="logo-area">
-            <img src="logo.png" alt="Sahara Agro Chemicals Logo" onerror="this.src='https://placeholder.com'">
+            <img src="logo.png" alt="Sahara Agro Chemicals Logo">
         </div>
         <nav>
             <a href="#home">Home</a>
@@ -352,7 +341,7 @@
         </nav>
     </header>
 
-    <!-- Marketing Hero Unit with Stable Core Colors -->
+    <!-- Marketing Hero Unit -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Transforming Agriculture.<br>Empowering Farmers.</h1>
@@ -366,5 +355,12 @@
         <h2>Our Featured Solutions</h2>
         <div class="grid-container">
 
-            <!-- Card Unit 1 -->
+            <!-- Card Unit 1 using your local logo.png -->
             <div class="product-card">
+                <div class="badge-orange">Bulk Enquiry</div>
+                <div class="image-wrapper">
+                    <img src="logo.png" alt="Sahara Star Temporary Placement">
+                </div>
+                <div class="card-details">
+                    <div class="stars">★★★★★</div>
+                    <h3>Sahara Star (Humic Acid 18%) - Soil Revitalizer</h3>
