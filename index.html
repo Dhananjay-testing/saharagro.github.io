@@ -6,8 +6,8 @@
     <title>Sahara Agro Chemicals | Leading the Green Revolution</title>
     <style>
         :root {
-            --primary: #123321; /* Deep Brand Green */
-            --accent: #d96b18;  /* Vibrant Orange Accent */
+            --primary: #123321; 
+            --accent: #d96b18;  
             --text-dark: #222222;
             --bg-light: #f9fbf9;
             --white: #ffffff;
@@ -27,7 +27,6 @@
             line-height: 1.5;
         }
 
-        /* Top Navigation Header */
         header {
             background: var(--white);
             padding: 12px 6%;
@@ -70,7 +69,6 @@
             color: var(--accent);
         }
 
-        /* Premium Hero Banner Section with Solid Gradient Backing */
         .hero {
             background: linear-gradient(135deg, #123321 0%, #1e4d34 100%);
             padding: 110px 8%;
@@ -122,8 +120,6 @@
             background-color: #bd5910;
             transform: translateY(-1px);
         }
-
-        /* Solutions Layout Grid */
         .solutions-section {
             padding: 60px 6%;
             text-align: center;
@@ -145,7 +141,6 @@
             margin-top: 20px;
         }
 
-        /* Product Showcase Cards */
         .product-card {
             background: var(--white);
             border-radius: 8px;
@@ -173,22 +168,32 @@
             z-index: 10;
         }
 
-        /* Container using your local logo.png so it never goes blank */
         .image-wrapper {
-            background-color: #f7f9f7;
+            background: linear-gradient(180deg, #f7f9f7 0%, #eef2ee 100%);
             padding: 20px;
             text-align: center;
             height: 220px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             border-bottom: 1px solid #e2e8e2;
         }
 
-        .image-wrapper img {
-            max-height: 80%;
-            max-width: 80%;
-            object-fit: contain;
+        .product-icon {
+            font-size: 55px;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        }
+
+        .product-mock-tag {
+            background-color: var(--primary);
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 3px 15px;
+            border-radius: 20px;
+            text-transform: uppercase;
         }
 
         .card-details {
@@ -262,8 +267,6 @@
             font-weight: bold;
             text-transform: uppercase;
         }
-
-        /* Middle Call-To-Action Ribbon */
         .cta-ribbon {
             background-color: #0e2233; 
             color: var(--white);
@@ -287,7 +290,6 @@
             margin-top: 4px;
         }
 
-        /* Layout Footer Frame */
         footer {
             background-color: var(--primary);
             color: var(--white);
@@ -328,7 +330,6 @@
 </head>
 <body>
 
-    <!-- Header Navigation Frame -->
     <header>
         <div class="logo-area">
             <img src="logo.png" alt="Sahara Agro Chemicals Logo">
@@ -341,7 +342,6 @@
         </nav>
     </header>
 
-    <!-- Marketing Hero Unit -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Transforming Agriculture.<br>Empowering Farmers.</h1>
@@ -349,18 +349,94 @@
             <a href="#contact" class="btn-orange">Get Consultation</a>
         </div>
     </section>
-
-    <!-- Showcase Grid Structure -->
     <section id="products" class="solutions-section">
         <h2>Our Featured Solutions</h2>
         <div class="grid-container">
 
-            <!-- Card Unit 1 using your local logo.png -->
+            <!-- Card Unit 1: Sahara Star -->
             <div class="product-card">
                 <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
-                    <img src="logo.png" alt="Sahara Star Temporary Placement">
+                    <div class="product-icon">🌱</div>
+                    <div class="product-mock-tag">Sahara Star</div>
                 </div>
                 <div class="card-details">
                     <div class="stars">★★★★★</div>
                     <h3>Sahara Star (Humic Acid 18%) - Soil Revitalizer</h3>
+                    <p>Boost Soil Immunity, Increase Nutrient Uptake profiles effectively across early seedling stages.</p>
+                    <a href="#contact" class="view-details-link">[View Details]</a>
+                    <div class="card-action-bar">
+                        <a href="https://wa.me" target="_blank" class="btn-dark-enquiry">Bulk Enquiry</a>
+                        <a href="#contact" class="read-more-text">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Unit 2: Sahara Bloom -->
+            <div class="product-card">
+                <div class="badge-orange">Bulk Enquiry</div>
+                <div class="image-wrapper">
+                    <div class="product-icon">🌸</div>
+                    <div class="product-mock-tag">Sahara Bloom</div>
+                </div>
+                <div class="card-details">
+                    <div class="stars">★★★★★</div>
+                    <h3>Sahara Bloom - Complete Micronutrient Mixture</h3>
+                    <p>Optimize Crop Yield, Prevent Element Deficiencies, and protect vegetation cellular balance.</p>
+                    <a href="#contact" class="view-details-link">[View Details]</a>
+                    <div class="card-action-bar">
+                        <a href="https://wa.me" target="_blank" class="btn-dark-enquiry">Bulk Enquiry</a>
+                        <a href="#contact" class="read-more-text">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Unit 3: Sahara Protect -->
+            <div class="product-card">
+                <div class="badge-orange">Bulk Enquiry</div>
+                <div class="image-wrapper">
+                    <div class="product-icon">🛡️</div>
+                    <div class="product-mock-tag">Sahara Protect</div>
+                </div>
+                <div class="card-details">
+                    <div class="stars">★★★★★</div>
+                    <h3>Sahara Protect - Advanced Fungicide (Tebuconazole 25.9% EC)</h3>
+                    <p>Effective Control, Comprehensive Crop Protection properties designed for scalable manufacturing safety fields.</p>
+                    <a href="#contact" class="view-details-link">[View Details]</a>
+                    <div class="card-action-bar">
+                        <a href="https://wa.me" target="_blank" class="btn-dark-enquiry">Bulk Enquiry</a>
+                        <a href="#contact" class="read-more-text">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Distributor Lead Capture Ribbon -->
+    <section id="network" class="cta-ribbon">
+        <div>
+            <h2>Become a Distributor | Join Our Growing Network</h2>
+            <p>Sahara Agro Chemicals is partner to thousands of farmers and retailers across India.</p>
+        </div>
+        <a href="mailto:digital.sahara.agro@://gmail.com" class="btn-orange">Apply Now</a>
+    </section>
+
+    <!-- Corporate Footer Frame -->
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Site Map</h4>
+                <p style="margin-top: 5px; line-height: 1.8;">About Us<br>Contact Us</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <p style="margin-top: 5px; line-height: 1.8;">📞 +91 1158302550<br>📧 digital.sahara.agro@gmail.com</p>
+            </div>
+        </div>
+        <div class="copyright-bar">
+            &copy; 2026 Sahara Agro Chemicals. All Rights Reserved. | Monitored by Corporate Digital Administration.
+        </div>
+    </footer>
+
+</body>
+</html>
