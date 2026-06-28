@@ -70,23 +70,16 @@
             color: var(--accent);
         }
 
-        nav a.active-link {
-            background-color: var(--accent);
-            color: var(--white);
-            padding: 8px 16px;
-            border-radius: 4px;
-        }
-
-        /* Premium Hero Banner Section */
+        /* Premium Hero Banner Section with Solid Gradient Backing */
         .hero {
-            background: linear-gradient(rgba(18, 51, 33, 0.75), rgba(18, 51, 33, 0.6)), 
-                        url('https://picsum.photos') no-repeat center center/cover;
+            background: linear-gradient(135deg, #123321 0%, #1e4d34 100%);
             padding: 110px 8%;
             color: var(--white);
             position: relative;
-            min-height: 450px;
+            min-height: 400px;
             display: flex;
             align-items: center;
+            border-bottom: 5px solid var(--accent);
         }
 
         .hero-content {
@@ -132,23 +125,23 @@
 
         /* Solutions Layout Grid */
         .solutions-section {
-            padding: 80px 6%;
+            padding: 60px 6%;
             text-align: center;
         }
 
         .solutions-section h2 {
-            font-size: 26px;
+            font-size: 28px;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: var(--primary);
-            margin-bottom: 35px;
+            margin-bottom: 45px;
             font-weight: 800;
         }
 
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            gap: 30px;
             margin-top: 20px;
         }
 
@@ -180,25 +173,37 @@
             z-index: 10;
         }
 
+        /* Native Colored Shape Container (No External Images Needed) */
         .image-wrapper {
-            background-color: #fcfcfc;
+            background: linear-gradient(180deg, #f7f9f7 0%, #eef2ee 100%);
             padding: 20px;
             text-align: center;
             height: 220px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            border-bottom: 1px solid #f0f0f0;
+            border-bottom: 1px solid #e2e8e2;
         }
 
-        .image-wrapper img {
-            max-height: 100%;
-            max-width: 100%;
-            object-fit: contain;
+        .product-icon {
+            font-size: 55px;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        }
+
+        .product-mock-tag {
+            background-color: var(--primary);
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 3px 15px;
+            border-radius: 20px;
+            text-transform: uppercase;
         }
 
         .card-details {
-            padding: 20px;
+            padding: 22px;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
@@ -207,23 +212,23 @@
         .stars {
             color: #ffb400;
             font-size: 14px;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .product-card h3 {
-            font-size: 15px;
+            font-size: 16px;
             color: #111111;
             font-weight: 700;
             text-transform: uppercase;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             min-height: 44px;
         }
 
         .product-card p {
             font-size: 13px;
-            color: #666666;
-            margin-bottom: 12px;
-            line-height: 1.4;
+            color: #555555;
+            margin-bottom: 15px;
+            line-height: 1.5;
         }
 
         .view-details-link {
@@ -246,10 +251,10 @@
         }
 
         .btn-dark-enquiry {
-            background-color: #13283c; /* Deep Slate Blue */
+            background-color: #13283c; 
             color: var(--white);
             text-decoration: none;
-            padding: 8px 16px;
+            padding: 9px 18px;
             font-size: 11px;
             font-weight: bold;
             text-transform: uppercase;
@@ -269,13 +274,9 @@
             text-transform: uppercase;
         }
 
-        .read-more-text:hover {
-            color: var(--accent);
-        }
-
         /* Middle Call-To-Action Ribbon */
         .cta-ribbon {
-            background-color: #0e2233; /* Corporate Slate */
+            background-color: #0e2233; 
             color: var(--white);
             padding: 40px 6%;
             display: flex;
@@ -286,23 +287,22 @@
         }
 
         .cta-ribbon h2 {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
         .cta-ribbon p {
             font-size: 13px;
             opacity: 0.8;
-            margin-top: 2px;
+            margin-top: 4px;
         }
 
         /* Layout Footer Frame */
         footer {
             background-color: var(--primary);
             color: var(--white);
-            padding: 35px 6% 20px;
+            padding: 40px 6% 25px;
             font-size: 13px;
             border-top: 4px solid var(--accent);
         }
@@ -352,7 +352,7 @@
         </nav>
     </header>
 
-    <!-- Marketing Hero Unit -->
+    <!-- Marketing Hero Unit with Stable Core Colors -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Transforming Agriculture.<br>Empowering Farmers.</h1>
@@ -363,10 +363,8 @@
 
     <!-- Showcase Grid Structure -->
     <section id="products" class="solutions-section">
-        <h2>Featured Solutions</h2>
+        <h2>Our Featured Solutions</h2>
         <div class="grid-container">
 
             <!-- Card Unit 1 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
-                <div class="image-wrapper">
