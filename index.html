@@ -172,6 +172,99 @@
         .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin-bottom: 25px; }
         .footer-col h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; color: #a4cfa4; }
         .copyright-bar { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 15px; text-align: center; font-size: 11px; opacity: 0.6; }
+        
+        /* Complete Mobile-First Layout Optimization System */
+        @media screen and (max-width: 768px) {
+            
+            /* 1. Header Fix: Hide desktop links to clean up screen clutter */
+            header nav {
+                display: none !important;
+            }
+            header {
+                justify-content: center;
+                padding: 10px;
+            }
+            header .logo-area img {
+                height: 42px;
+            }
+
+            /* 2. Banner Fix: Scale down height and keep subjects fully visible */
+            .hero {
+                min-height: 280px !important;
+                padding: 40px 5% !important;
+                background-position: center center !important;
+            }
+            .hero h1 {
+                font-size: 26px !important;
+            }
+            .hero p {
+                font-size: 14px !important;
+            }
+
+            /* 3. Sticky Quick-Nav Menu Fix: Keep category anchors locked to top */
+            .cat-menu {
+                top: 61px !important;
+                padding: 10px 3% !important;
+                gap: 8px !important;
+            }
+            .cat-btn {
+                font-size: 10px !important;
+                padding: 6px 12px !important;
+                flex: 1 1 40%; /* Grid-style rows of buttons */
+                text-align: center;
+            }
+
+            /* 4. Infinite Scrolling Fix: Compact 2-Column Swipe Grid */
+            .solutions-section {
+                padding: 30px 4% !important;
+            }
+            .solutions-section h2 {
+                font-size: 20px !important;
+                margin-bottom: 25px !important;
+            }
+            .grid-container {
+                display: flex !important;
+                overflow-x: auto !important; /* Activates horizontal touch sliding */
+                scroll-snap-type: x mandatory;
+                gap: 15px !important;
+                padding: 10px 5px 20px !important;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            /* Compact Card Sizing for Horizontal Slider */
+            .product-card {
+                flex: 0 0 75% !important; /* Shows 1.5 cards on screen so users know to swipe */
+                scroll-snap-align: start;
+                background: var(--white) !important;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
+            }
+            .image-wrapper {
+                height: 160px !important;
+                padding: 10px !important;
+            }
+            .card-details {
+                padding: 14px !important;
+            }
+            .card-details h3 {
+                font-size: 13px !important;
+                min-height: 38px !important;
+            }
+            .card-details p {
+                font-size: 11px !important;
+                margin-bottom: 12px !important;
+                display: -webkit-box;
+                -webkit-line-clamp: 3; /* Truncates long paragraphs into a neat 3-line preview */
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .btn-enquiry {
+                padding: 6px 10px !important;
+                font-size: 10px !important;
+            }
+            .pack-size {
+                font-size: 10px !important;
+            }
+        }
     </style>
 </head>
 <body>
