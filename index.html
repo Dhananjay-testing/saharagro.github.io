@@ -258,12 +258,14 @@
                 font-size: 14px !important;
             }
 
-            /* 3. Sticky Quick-Nav Menu Fix: Keep category anchors locked to top */
+            /* Quick-Nav Menu Fix: Disable stickiness entirely on mobile devices */
             .cat-menu {
-                top: 61px !important;
-                padding: 10px 3% !important;
+                position: relative !important; /* Forces it to scroll naturally instead of staying stuck */
+                top: 0 !important;
+                padding: 15px 3% !important;
                 gap: 8px !important;
             }
+
             .cat-btn {
                 font-size: 10px !important;
                 padding: 6px 12px !important;
