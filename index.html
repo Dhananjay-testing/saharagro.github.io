@@ -176,10 +176,67 @@
         /* Complete Mobile-First Layout Optimization System */
         @media screen and (max-width: 768px) {
             
-            /* 1. Header Fix: Hide desktop links to clean up screen clutter */
-            header nav {
-                display: none !important;
+                       /* Mobile Header Layout Restructuring */
+            header {
+                position: relative;
+                flex-wrap: wrap;
+                padding: 12px 5% !important;
             }
+            header nav {
+                display: flex !important;
+                width: 100%;
+                justify-content: space-around;
+                margin-top: 10px;
+                border-top: 1px solid #f0f0f0;
+                padding-top: 10px;
+                gap: 5px;
+            }
+            nav a {
+                margin-left: 0 !important;
+                font-size: 11px !important;
+                padding: 5px 8px;
+                color: #333 !important;
+                text-transform: capitalize !important;
+            }
+            
+            /* Mobile Products Dropdown Container Engine */
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-menu {
+                display: none;
+                position: absolute;
+                background-color: var(--white);
+                min-width: 160px;
+                box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+                border-radius: 4px;
+                z-index: 2000;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                border: 1px solid #eaeaea;
+            }
+            .dropdown-menu a {
+                color: #222 !important;
+                padding: 10px 14px !important;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+                font-size: 11px !important;
+                border-bottom: 1px solid #f9f9f9;
+                text-transform: capitalize !important;
+            }
+            .dropdown-menu a:last-child { border-bottom: none; }
+            .dropdown:hover .dropdown-menu {
+                display: block; /* Reveals categories smoothly on tap/hover */
+            }
+            .dropdown-toggle::after {
+                content: ' ▼';
+                font-size: 8px;
+                vertical-align: middle;
+            }
+
             header {
                 justify-content: center;
                 padding: 10px;
@@ -269,17 +326,31 @@
 </head>
 <body>
 
+        <!-- Unified Responsive Header Framework -->
     <header>
-        <div class="logo-area"><img src="logo.png" alt="Sahara Agro Logo"></div>
+        <div class="logo-area">
+            <img src="logo.png" alt="Sahara Agro Logo">
+        </div>
         <nav>
             <a href="#home">Home</a>
-            <a href="#soluble-fertilizers">Soluble Fertilizers</a>
-            <a href="#micronutrients">Micronutrients</a>
-            <a href="#biostimulants">Biostimulants</a>
-            <a href="#liquid-fertilizers">Liquids</a>
-            <a href="#protection">Crop Protection</a>
+            
+            <!-- Products Sub-Category Dropdown Trigger -->
+            <div class="dropdown">
+                <a href="#soluble-fertilizers" class="dropdown-toggle" onclick="return false;">Products</a>
+                <div class="dropdown-menu">
+                    <a href="#soluble-fertilizers">NPK Soluble Fertilizers</a>
+                    <a href="#micronutrients">Micronutrients & Chelates</a>
+                    <a href="#biostimulants">Biostimulants & Boosters</a>
+                    <a href="#liquid-fertilizers">Liquid Range</a>
+                    <a href="#protection">Crop Protection Range</a>
+                </div>
+            </div>
+            
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
         </nav>
     </header>
+
 
     <section id="home" class="hero">
         <div class="hero-content">
