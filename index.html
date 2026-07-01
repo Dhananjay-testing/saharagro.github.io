@@ -197,11 +197,14 @@
 
         .cat-btn:hover { background: var(--accent); border-color: var(--accent); }
 
-        .section-title {
+            .section-title {
             padding: 60px 6% 20px;
             text-align: center;
             background: var(--white);
+            /* Patched: Creates a physical 140px safe zone above the heading when jumped to */
+            scroll-margin-top: 140px; 
         }
+
 
         .section-title h2 { font-size: 26px; text-transform: uppercase; color: var(--primary); font-weight: 800; }
         .section-title p { font-size: 14px; color: #666; margin-top: 5px; text-transform: uppercase; letter-spacing: 1px; }
