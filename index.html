@@ -198,28 +198,40 @@
         .cat-btn:hover { background: var(--accent); border-color: var(--accent); }
 
         .section-title {
-            padding: 80px 6% 30px;
-            text-align: center;
-            background: transparent; /* Allows section colors to flow seamlessly */
-            scroll-margin-top: 50px; 
-            position: relative;
-        }
+    padding: 40px 6% 15px; /* Fixed asymmetric spacing */
+    text-align: center;
+    background: transparent;
+    scroll-margin-top: 140px; 
+    position: relative;
+}
 
-        /* Creates a premium green and orange geometric accent divider line below titles */
-        .section-title h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background-color: var(--accent);
-            margin: 12px auto 0;
-            border-radius: 2px;
-        }
+/* Formats the main uppercase title heading */
+.section-title h2 {
+    font-size: 26px;
+    text-transform: uppercase;
+    color: var(--primary);
+    font-weight: 800;
+    margin-bottom: 8px; /* Control gap to orange line */
+}
 
+/* Places the orange dash exactly between the header and subheader text */
+.section-title h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3.5px;
+    background-color: var(--accent);
+    margin: 8px auto 8px; /* Balanced top and bottom margins */
+    border-radius: 2px;
+}
 
-
-        .section-title h2 { font-size: 26px; text-transform: uppercase; color: var(--primary); font-weight: 800; }
-        .section-title p { font-size: 14px; color: #666; margin-top: 5px; text-transform: uppercase; letter-spacing: 1px; }
+/* Formats the small sub-header text description below the line */
+.section-title p {
+    font-size: 13px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
         .catalog-container { padding: 0 6% 60px; background: var(--white); }
         .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
