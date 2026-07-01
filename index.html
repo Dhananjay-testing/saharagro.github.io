@@ -233,6 +233,12 @@
     letter-spacing: 1px;
 }
 
+/* Patched: Creates a safe zone above the About section during anchor link jumps */
+#about {
+    scroll-margin-top: 140px;
+}
+
+
         .catalog-container { padding: 0 6% 60px; background: var(--white); }
         .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
         .product-card {
