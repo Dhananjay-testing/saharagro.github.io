@@ -197,13 +197,25 @@
 
         .cat-btn:hover { background: var(--accent); border-color: var(--accent); }
 
-            .section-title {
-            padding: 60px 6% 20px;
+        .section-title {
+            padding: 80px 6% 30px;
             text-align: center;
-            background: var(--white);
-            /* Patched: Creates a physical 140px safe zone above the heading when jumped to */
-            scroll-margin-top: 140px; 
+            background: transparent; /* Allows section colors to flow seamlessly */
+            scroll-margin-top: 50px; 
+            position: relative;
         }
+
+        /* Creates a premium green and orange geometric accent divider line below titles */
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+
 
 
         .section-title h2 { font-size: 26px; text-transform: uppercase; color: var(--primary); font-weight: 800; }
