@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Locate A Sahara Agro Retailer | Authorized Partner Network</title>
-    <!-- Open-Source Leaflet Map API CSS Import Asset -->
-    <link rel="stylesheet" href="https://unpkg.com" crossorigin="" />
     <style>
         :root {
             --primary: #123321;
@@ -19,7 +17,7 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; scroll-behavior: smooth; }
         body { background-color: var(--white); color: var(--text-dark); line-height: 1.5; }
         
-        /* Unified Desktop Header Navigation Frame */
+        /* Unified Corporate Widescreen Navbar Frame */
         header {
             background: var(--white);
             padding: 15px 6%;
@@ -36,7 +34,7 @@
         nav a { text-decoration: none; color: #444444; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
         nav a:hover { color: var(--accent); }
 
-        /* Unified Desktop Header Dropdown Logic */
+        /* Integrated Navigation Header Dropdown Mechanics */
         .dropdown { position: relative; display: inline-block; }
         .dropdown-toggle::after { content: ' ▼'; font-size: 9px; color: #888; }
         .dropdown-menu { display: none; position: absolute; background-color: var(--white); min-width: 240px; box-shadow: 0px 8px 24px rgba(0,0,0,0.12); border-radius: 6px; padding: 6px 0; z-index: 2000; top: 100%; left: 50%; transform: translateX(-50%); border: 1px solid #eaeaea; margin-top: 10px; }
@@ -48,37 +46,25 @@
         .portal-workspace { padding: 40px 6% 60px; max-width: 1300px; margin: 0 auto; }
         .portal-title { font-size: 24px; text-transform: uppercase; color: var(--primary); font-weight: 800; margin-bottom: 20px; border-left: 4px solid var(--accent); padding-left: 12px; }
         
-        /* Filter Component Panel Box */
+        /* Filter Component Selection Row */
         .filter-row { background: var(--bg-light); padding: 20px; border-radius: 6px; border: 1px solid #e2e8e2; margin-bottom: 30px; display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
         .filter-row label { font-size: 12px; font-weight: 800; text-transform: uppercase; color: var(--primary); letter-spacing: 0.5px; }
         .filter-row select { padding: 10px 18px; font-size: 13px; font-weight: 700; border-radius: 4px; border: 1px solid #cbd5e1; background-color: var(--white); min-width: 250px; text-transform: uppercase; outline: none; cursor: pointer; }
 
-        /* Free Open Source Map API Box Frame */
-        /* Patched OpenStreetMap Container styling with strict display visibility anchors */
-        #openStreetMapContainer { 
-            width: 100%; 
-            height: 420px !important; /* Explicitly locks height parameters */
-            min-height: 420px !important; 
-            border-radius: 6px; 
-            overflow: hidden; 
-            border: 1px solid #cbd5e1; 
-            margin-bottom: 35px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.04); 
-            z-index: 10; 
-            display: block !important; /* Forces rendering engine visibility block state */
-        }
+        /* Secure Google My Maps Display Frame Container */
+        .map-wrapper-box { width: 100%; height: 460px; border-radius: 6px; overflow: hidden; border: 1px solid #cbd5e1; margin-bottom: 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
         
-        /* Structured Data Table Ledger Layout */
+        /* Structured Table Ledger Layout Framework */
         .table-wrapper { width: 100%; overflow-x: auto; border: 1px solid #e2e8e2; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
         table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; background: var(--white); }
         tr { border-bottom: 1px solid #eaeaea; }
         thead tr { background-color: var(--secondary); color: var(--white); text-transform: uppercase; }
         th, td { padding: 14px 18px; }
-        
         .route-link { color: var(--accent); text-decoration: none; font-weight: bold; }
         .route-link:hover { text-decoration: underline; }
+        .connect-btn { background-color: #25d366; color: white; text-decoration: none; padding: 6px 12px; font-size: 11px; font-weight: bold; border-radius: 4px; text-transform: uppercase; display: inline-block; }
 
-        /* Distributor Card Ribbon & Corporate Footer */
+        /* Footer Ribbon Elements */
         .cta-ribbon { background-color: var(--secondary); color: var(--white); padding: 40px 6%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
         .cta-ribbon h2 { font-size: 20px; font-weight: 700; text-transform: uppercase; }
         footer { background-color: var(--primary); color: var(--white); padding: 40px 6% 25px; font-size: 13px; border-top: 4px solid var(--accent); }
@@ -86,13 +72,13 @@
         .footer-col h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; color: #a4cfa4; }
         .copyright-bar { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 15px; text-align: center; font-size: 11px; opacity: 0.6; }
 
-        /* Smartphone Navigation Override Rules */
+        /* Smartphone Mobile Navigation Override System Rules */
         @media screen and (max-width: 768px) {
             header { padding: 12px 5% !important; flex-wrap: wrap; }
             header nav { display: flex !important; width: 100%; justify-content: space-around; margin-top: 10px; border-top: 1px solid #f0f0f0; padding-top: 10px; gap: 5px; }
             nav a { font-size: 11px !important; padding: 5px 8px; color: #333 !important; text-transform: capitalize !important; margin-left: 0 !important; }
             .dropdown-menu { min-width: 160px; }
-            #openStreetMapContainer { height: 300px !important; }
+            .map-wrapper-box { height: 320px !important; }
         }
     </style>
 </head>
@@ -122,21 +108,22 @@
 
     <!-- Main Dynamic Directory Portal Viewport Container -->
     <main class="portal-workspace">
-        <h2 class="portal-title">LOCATE A SAHARA AGRO RETAILER NEAR YOU</h2>
+        <h2 class="portal-title">Authorized Retailer & Stockist Network</h2>
         
-        <!-- Live Search Dropdown Row Component: Mapped to Talukas -->
+        <!-- Search Filter Dropdown Row Component: Mapped to Talukas -->
         <div class="filter-row">
-            <label for="talukaSelector">Filter Partners By Taluka / Block Area:</label>
-            <select id="talukaSelector" onchange="processRegionalLookup()">
+            <label for="talukaSelector">Filter Partners By Taluka Area:</label>
+            <select id="talukaSelector" onchange="filterDealerLedgerTable()">
                 <option value="all">Show All Districts & Talukas</option>
                 <option value="satara">Satara Taluka Block</option>
                 <option value="jawali">Jawali Taluka Block</option>
                 <option value="haveli">Haveli Taluka Block (Pune Zone)</option>
             </select>
         </div>
-
-        <!-- Live Open-Source Leaflet API Map Grid Canvas Element -->
-        <div id="openStreetMapContainer"></div>
+        <!-- Google My Maps Deployment Container Frame with Live Embed Link -->
+        <div class="map-wrapper-box">
+            <iframe src="https://google.com" style="border:0; width:100%; height:100%;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
 
         <!-- Structured Enterprise Ledger Table Area -->
         <div class="table-wrapper">
@@ -149,10 +136,52 @@
                         <th style="text-align: center;">Taluka</th>
                         <th style="text-align: center;">PIN Code</th>
                         <th style="text-align: center;">Dealer Mobile Number</th>
+                        <th style="text-align: center;">Connect</th>
                     </tr>
                 </thead>
                 <tbody id="portalTableBody">
-                    <!-- Dynamic Rows Populated Instantly by Controller Execution Core Below -->
+                    <!-- Dealer Row 1: A K Fertilisers -->
+                    <tr class="dealer-row" data-taluka="satara">
+                        <td style="font-weight:700; text-transform:uppercase; color:#111;">A K FERTILISERS & CHEMICALS</td>
+                        <td style="color:#555; text-transform:uppercase;">A/P. VELE, TAL. SATARA</td>
+                        <td style="text-align:center;"><a href="https://google.com" target="_blank" class="route-link">📍 View Location</a></td>
+                        <td style="text-align:center; font-weight:600; text-transform:uppercase; color:#444;">satara</td>
+                        <td style="text-align:center; font-weight:bold; color:#666;">414701</td>
+                        <td style="text-align:center; font-weight:bold; color:var(--primary);"><a href="tel:7558556472" style="color:inherit; text-decoration:none;">7558556472</a></td>
+                        <td style="text-align:center;"><a href="https://wa.me" target="_blank" class="connect-btn">WhatsApp</a></td>
+                    </tr>
+                    
+                    <!-- Dealer Row 2: Sahara Agro Outlet -->
+                    <tr class="dealer-row" data-taluka="satara">
+                        <td style="font-weight:700; text-transform:uppercase; color:#111;">SAHARA AGRO CO OUTLET</td>
+                        <td style="color:#555; text-transform:uppercase;">SR. NO 136, VILLAGE VELE, DIST. SATARA</td>
+                        <td style="text-align:center;"><a href="https://google.com" target="_blank" class="route-link">📍 View Location</a></td>
+                        <td style="text-align:center; font-weight:600; text-transform:uppercase; color:#444;">satara</td>
+                        <td style="text-align:center; font-weight:bold; color:#666;">415022</td>
+                        <td style="text-align:center; font-weight:bold; color:var(--primary);"><a href="tel:7558556472" style="color:inherit; text-decoration:none;">7558556472</a></td>
+                        <td style="text-align:center;"><a href="https://wa.me" target="_blank" class="connect-btn">WhatsApp</a></td>
+                    </tr>
+                    <!-- Dealer Row 3: Krishi Seva Kendra -->
+                    <tr class="dealer-row" data-taluka="jawali">
+                        <td style="font-weight:700; text-transform:uppercase; color:#111;">KRISHI SEVA KENDRA JAWALI</td>
+                        <td style="color:#555; text-transform:uppercase;">MAIN BAZAR ROAD, JAWALI BLOCK</td>
+                        <td style="text-align:center;"><a href="https://google.com" target="_blank" class="route-link">📍 View Location</a></td>
+                        <td style="text-align:center; font-weight:600; text-transform:uppercase; color:#444;">jawali</td>
+                        <td style="text-align:center; font-weight:bold; color:#666;">415514</td>
+                        <td style="text-align:center; font-weight:bold; color:var(--primary);"><a href="tel:7558556472" style="color:inherit; text-decoration:none;">7558556472</a></td>
+                        <td style="text-align:center;"><a href="https://wa.me" target="_blank" class="connect-btn">WhatsApp</a></td>
+                    </tr>
+                    
+                    <!-- Dealer Row 4: Mauli Agriculture Solutions -->
+                    <tr class="dealer-row" data-taluka="haveli">
+                        <td style="font-weight:700; text-transform:uppercase; color:#111;">MAULI AGRICULTURE SOLUTIONS</td>
+                        <td style="color:#555; text-transform:uppercase;">GATE NO 3, MARKET YARD, PUNE HUB</td>
+                        <td style="text-align:center;"><a href="https://google.com" target="_blank" class="route-link">📍 View Location</a></td>
+                        <td style="text-align:center; font-weight:600; text-transform:uppercase; color:#444;">haveli</td>
+                        <td style="text-align:center; font-weight:bold; color:#666;">411037</td>
+                        <td style="text-align:center; font-weight:bold; color:var(--primary);"><a href="tel:7558556472" style="color:inherit; text-decoration:none;">7558556472</a></td>
+                        <td style="text-align:center;"><a href="https://wa.me" target="_blank" class="connect-btn">WhatsApp</a></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -197,78 +226,21 @@
             &copy; 2026 Sahara Agro Chemicals & Fertilizers. All Rights Reserved. | Monitored by Corporate Digital Administration.
         </div>
     </footer>
-    <!-- Leaflet Map Engine JavaScript Core Asset Link -->
-    <script src="https://unpkg.com" crossorigin=""></script>
+    <!-- Client-Side Live Sorting Controller Logic -->
     <script>
-        // Centralized Master JavaScript Partner Database Array Matrix
-        // You can copy rows straight out of your Excel sheet and format them exactly like these lines
-        const masterDealerRegistry = [
-            { name: "A K FERTILISERS & CHEMICALS", address: "A/P. VELE, TAL. SATARA", mapLink: "https://google.com", taluka: "satara", pin: "414701", phone: "7558556472", lat: 17.6823, lng: 73.9245 },
-            { name: "SAHARA AGRO CO OUTLET", address: "SR. NO 136, VILLAGE VELE, DIST. SATARA", mapLink: "https://google.com", taluka: "satara", pin: "415022", phone: "7558556472", lat: 17.6805, lng: 73.9318 },
-            { name: "KRISHI SEVA KENDRA JAWALI", address: "MAIN BAZAR ROAD, JAWALI BLOCK", mapLink: "https://google.com", taluka: "jawali", pin: "415514", phone: "7558556472", lat: 17.7241, lng: 73.8412 },
-            { name: "MAULI AGRICULTURE SOLUTIONS", address: "GATE NO 3, MARKET YARD, PUNE HUB", mapLink: "https://google.com", taluka: "haveli", pin: "411037", phone: "7558556472", lat: 18.4965, lng: 73.8567 }
-        ];
-
-        let globalLeafletMapInstance = null;
-        let globalActiveMarkerGroup = [];
-        function initializeMapEngineCore() {
-            // Setup base map view layer centered globally over Satara district coordinates
-            globalLeafletMapInstance = L.map('openStreetMapContainer').setView([17.6805, 73.9318], 10);
+        function filterDealerLedgerTable() {
+            const selectedValue = document.getElementById("talukaSelector").value;
+            const rows = document.getElementsByClassName("dealer-row");
             
-            // Pull high-fidelity open tile landscape graphics cleanly
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 18,
-                attribution: '&copy; OpenStreetMap contributors'
-            }).addTo(globalLeafletMapInstance);
-
-            processRegionalLookup();
-        }
-
-        function processRegionalLookup() {
-            const targetFilterValue = document.getElementById("talukaSelector").value;
-            const tbody = document.getElementById("portalTableBody");
-            
-            // Clear prior marker vectors from map grid space array
-            globalActiveMarkerGroup.forEach(marker => globalLeafletMapInstance.removeLayer(marker));
-            globalActiveMarkerGroup = [];
-            tbody.innerHTML = "";
-
-            let coordinatesBoundingArray = [];
-
-            // Execute evaluation loop across registry data array
-            masterDealerRegistry.forEach(dealer => {
-                if (targetFilterValue === "all" || dealer.taluka === targetFilterValue) {
-                    
-                    // 1. Compile and append entry layout rows directly into data table ledger
-                    const tr = document.createElement("tr");
-                    tr.innerHTML = `
-                        <td style="font-weight:700; text-transform:uppercase; color:#111; padding: 14px 18px;">\${dealer.name}</td>
-                        <td style="color:#555; text-transform:uppercase; padding: 14px 18px;">\${dealer.address}</td>
-                        <td style="text-align:center; padding: 14px 18px;"><a href="\${dealer.mapLink}" target="_blank" class="route-link">📍 View Location</a></td>
-                        <td style="text-align:center; font-weight:600; text-transform:uppercase; color:#444; padding: 14px 18px;">\${dealer.taluka}</td>
-                        <td style="text-align:center; font-weight:bold; color:#666; padding: 14px 18px;">\${dealer.pin}</td>
-                        <td style="text-align:center; padding: 14px 18px; font-weight:bold; color:var(--primary);"><a href="tel:\${dealer.phone}" style="color:inherit; text-decoration:none;">\${dealer.phone}</a></td>
-                    `;
-                    tbody.appendChild(tr);
-
-                    // 2. Drop corresponding interactive geolocation pin onto map panel layer
-                    const pinMarker = L.marker([dealer.lat, dealer.lng]).addTo(globalLeafletMapInstance)
-                        .bindPopup(`<b>\${dealer.name}</b><br><span style="font-size:11px; text-transform:uppercase;">\${dealer.address}</span>`);
-                    
-                    globalActiveMarkerGroup.push(pinMarker);
-                    coordinatesBoundingArray.push([dealer.lat, dealer.lng]);
+            for (let i = 0; i < rows.length; i++) {
+                const rowTaluka = rows[i].getAttribute("data-taluka");
+                if (selectedValue === "all" || rowTaluka === selectedValue) {
+                    rows[i].style.display = ""; // Makes row visible
+                } else {
+                    rows[i].style.display = "none"; // Hides row from viewport
                 }
-            });
-
-            // Re-center map positioning focus view boundary loop dynamically based on results
-            if (coordinatesBoundingArray.length > 0) {
-                const boundingLatLngBounds = L.latLngBounds(coordinatesBoundingArray);
-                globalLeafletMapInstance.fitBounds(boundingLatLngBounds, { padding: [30, 30] });
             }
         }
-
-        // Initialize mapping mechanics seamlessly when window resources compile fully
-        window.addEventListener("DOMContentLoaded", initializeMapEngineCore);
     </script>
 </body>
 </html>
