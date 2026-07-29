@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locate A Sahara Agro Retailer | Authorized Partner Network</title>
+    <style>
+        :root {
+            --primary: #123321;
+            --accent: #d96b18;
+            --text-dark: #222222;
+            --bg-light: #f4f7f4;
+            --white: #ffffff;
+            --secondary: #0e2233;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
+        body { background-color: var(--white); color: var(--text-dark); line-height: 1.5; padding: 30px 5%; }
+        
+        .header-bar { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--accent); padding-bottom: 15px; margin-bottom: 20px; }
+        .back-btn { background-color: var(--secondary); color: var(--white); text-decoration: none; padding: 8px 16px; font-size: 11px; font-weight: bold; text-transform: uppercase; border-radius: 4px; }
+        
+        .search-row { background: var(--bg-light); padding: 20px; border-radius: 6px; border: 1px solid #e2e8e2; margin-bottom: 30px; display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
+        .search-row label { font-size: 13px; font-weight: 800; text-transform: uppercase; color: var(--primary); }
+        .search-row select { padding: 10px 18px; font-size: 13px; font-weight: 700; border-radius: 4px; border: 1px solid #cbd5e1; background-color: var(--white); min-width: 260px; text-transform: uppercase; }
+
+        .map-box { width: 100%; height: 400px; border-radius: 6px; overflow: hidden; border: 1px solid #cbd5e1; margin-bottom: 35px; }
+        
+        .table-wrapper { width: 100%; overflow-x: auto; border: 1px solid #e2e8e2; border-radius: 6px; }
+        table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; }
+        tr { border-bottom: 1px solid #eaeaea; }
+        thead tr { background-color: var(--secondary); color: var(--white); text-transform: uppercase; }
+        th, td { padding: 14px 18px; }
+        
+        .route-link { color: var(--accent); text-decoration: none; font-weight: bold; }
+        .connect-btn { background-color: #25d366; color: white; text-decoration: none; padding: 6px 12px; font-size: 11px; font-weight: bold; border-radius: 4px; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+    <div class="header-bar">
+        <h2 style="text-transform: uppercase; color: var(--primary); font-weight: 800;">Locate A Sahara Agro Retailer</h2>
+        <a href="index.html" class="back-btn">← Return to Home</a>
+    </div>
+
+    <div class="search-row">
+        <label for="districtSelector">Search Dealers By Area:</label>
+        <select id="districtSelector" onchange="syncPortalNetwork()">
+            <option value="satara">Satara District (Corporate HQ Zone)</option>
+            <option value="pune">Pune District (Regional Logistics Hub)</option>
+        </select>
+    </div>
+
+    <div class="map-box">
+        <iframe id="portalLiveMap" src="" style="border:0; width:100%; height:100%;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Dealer Name</th>
+                    <th>Dealer Address</th>
+                    <th style="text-align: center;">View Map</th>
+                    <th style="text-align: center;">PIN Code</th>
+                    <th style="text-align: center;">Dealer Mobile Number</th>
+                </tr>
+            </thead>
+            <tbody id="portalTableBody"></tbody>
+        </table>
+    </div>
+
+    <script>
+        const portalDatabase = {
+            satara: {
+                mapFrame: "https://google.com",
+                records: [
+                    { name: "A K FERTILISERS & CHEMICALS", address: "A/P. VELE, TAL. SATARA", mapLink: "https://google.com", pin: "414701", phone: "7558556472" },
+                    { name: "SAHARA AGRO CO Outlet", address: "SR. NO 136, VILLAGE VELE, DIST. SATARA", mapLink: "https://google.com", pin: "415022", phone: "7558556472" }
+                ]
+            },
+            pune: {
+                mapFrame: "https://google.com",
+                records: [
+                    { name: "MAULI AGRICULTURE SOLUTIONS", address: "GATE NO 3, MARKET YARD, PUNE HUB", mapLink: "https://google.com", pin: "411037", phone: "7558556472" }
+                ]
+            }
+        };
+
+        function syncPortalNetwork() {
+            const currentZone = document.getElementById("districtSelector").value;
+            const contextData = portalDatabase[currentZone];
+            document.getElementById("portalLiveMap").src = contextData.mapFrame;
+            const tbody = document.getElementById("portalTableBody");
+            tbody.innerHTML = "";
+            contextData.records.forEach(item => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+                    <td style="font-weight:700; text-transform:uppercase;">${item.name}</td>
+                    <td style="color:#555; text-transform:uppercase;">${item.address}</td>
+                    <td style="text-align:center;"><a href="${item.mapLink}" target="_blank" class="route-link">📍 View Location</a></td>
+                    <td style="text-align:center; font-weight:bold; color:#666;">${item.pin}</td>
+                    <td style="text-align:center;"><a href="tel:${item.phone}" style="text-decoration:none; color:inherit; font-weight:bold;">${item.phone}</a></td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+        document.addEventListener("DOMContentLoaded", syncPortalNetwork);
+    </script>
+</body>
+</html>
