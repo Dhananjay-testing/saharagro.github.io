@@ -70,7 +70,8 @@
         nav a:hover {
             color: var(--accent);
         }
-        /* Desktop Dropdown Framework: Clean, Floating Horizontal Line */
+
+        /* Desktop Dropdown Framework */
         .dropdown {
             position: relative;
             display: inline-block;
@@ -122,10 +123,9 @@
         }
 
         .dropdown:hover .dropdown-menu {
-            display: block; /* Opens smoothly when desktop mouse hovers over it */
+            display: block;
         }
 
-        /* Creates an invisible mathematical bridge so the mouse never exits the hover zone */
         .dropdown::after {
             content: '';
             position: absolute;
@@ -134,12 +134,11 @@
             bottom: -15px;
             left: 0;
         }
-
-        /* Fixed Widescreen Hero Section - Shifting Subjects Right */
+        /* Fixed Widescreen Hero Section */
         .hero {
             background: linear-gradient(rgba(18, 51, 33, 0.45), rgba(18, 51, 33, 0.45)), url('banner.jpg');
             background-size: cover;
-            background-position: 85% center; /* Forces farmers/products to the right, clearing the left text area */
+            background-position: 85% center;
             background-repeat: no-repeat;
             padding: 140px 8%;
             color: var(--white);
@@ -153,7 +152,7 @@
 
         .hero-content {
             max-width: 600px;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.5); /* Enhances readability over the background */
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
         }
 
         .hero h1 {
@@ -182,16 +181,15 @@
             font-size: 14px;
             text-transform: uppercase;
             border-radius: 4px;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
             box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            transition: 0.3s;
         }
 
         .btn-orange:hover {
             background-color: #bd5910;
             transform: translateY(-1px);
         }
+
         .cat-menu {
             background: var(--secondary);
             padding: 15px 6%;
@@ -219,34 +217,31 @@
         .cat-btn:hover { background: var(--accent); border-color: var(--accent); }
 
         .section-title {
-            padding: 40px 6% 15px; /* Fixed asymmetric spacing */
+            padding: 40px 6% 15px;
             text-align: center;
             background: transparent;
             scroll-margin-top: 140px; 
             position: relative;
         }
 
-        /* Formats the main uppercase title heading */
         .section-title h2 {
             font-size: 26px;
             text-transform: uppercase;
             color: var(--primary);
             font-weight: 800;
-            margin-bottom: 8px; /* Control gap to orange line */
+            margin-bottom: 8px;
         }
 
-        /* Places the orange dash exactly between the header and subheader text */
         .section-title h2::after {
             content: '';
             display: block;
             width: 50px;
             height: 3.5px;
             background-color: var(--accent);
-            margin: 8px auto 8px; /* Balanced top and bottom margins */
+            margin: 8px auto 8px;
             border-radius: 2px;
         }
 
-        /* Formats the small sub-header text description below the line */
         .section-title p {
             font-size: 13px;
             color: #666;
@@ -254,7 +249,6 @@
             letter-spacing: 1px;
         }
 
-        /* Patched: Creates a safe zone above the About section during anchor link jumps */
         #about {
             scroll-margin-top: 140px;
         }
@@ -270,10 +264,11 @@
             display: flex;
             flex-direction: column;
             transition: 0.3s;
+            position: relative;
         }
 
         .product-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
-        /* Clean Container Framework for portrait product files inside squares */
+
         .image-wrapper {
             background-color: var(--white);
             padding: 15px;
@@ -309,147 +304,29 @@
         .footer-col h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; color: #a4cfa4; }
         .copyright-bar { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 15px; text-align: center; font-size: 11px; opacity: 0.6; }
 
-        /* Complete Mobile-First Layout Optimization System */
         @media screen and (max-width: 768px) {
-            
-            /* Mobile Header Layout Restructuring */
-            header {
-                position: relative;
-                flex-wrap: wrap;
-                padding: 12px 5% !important;
-            }
-            header nav {
-                display: flex !important;
-                width: 100%;
-                justify-content: space-around;
-                margin-top: 10px;
-                border-top: 1px solid #f0f0f0;
-                padding-top: 10px;
-                gap: 5px;
-            }
-            nav a {
-                margin-left: 0 !important;
-                font-size: 11px !important;
-                padding: 5px 8px;
-                color: #333 !important;
-                text-transform: capitalize !important;
-            }
-            
-            /* Mobile Products Dropdown Container Engine */
-            .dropdown {
-                position: relative;
-                display: inline-block;
-            }
-            .dropdown-menu {
-                display: none;
-                position: absolute;
-                background-color: var(--white);
-                min-width: 160px;
-                box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
-                border-radius: 4px;
-                z-index: 2000;
-                top: 100%;
-                left: 50%;
-                transform: translateX(-50%);
-                border: 1px solid #eaeaea;
-            }
-            .dropdown-menu a {
-                color: #222 !important;
-                padding: 10px 14px !important;
-                text-decoration: none;
-                display: block;
-                text-align: left;
-                font-size: 11px !important;
-                border-bottom: 1px solid #f9f9f9;
-                text-transform: capitalize !important;
-            }
+            header { position: relative; flex-wrap: wrap; padding: 12px 5% !important; }
+            header nav { display: flex !important; width: 100%; justify-content: space-around; margin-top: 10px; border-top: 1px solid #f0f0f0; padding-top: 10px; gap: 5px; }
+            nav a { margin-left: 0 !important; font-size: 11px !important; padding: 5px 8px; color: #333 !important; text-transform: capitalize !important; }
+            .dropdown { position: relative; display: inline-block; }
+            .dropdown-menu { display: none; position: absolute; background-color: var(--white); min-width: 160px; box-shadow: 0px 8px 16px rgba(0,0,0,0.15); border-radius: 4px; z-index: 2000; top: 100%; left: 50%; transform: translateX(-50%); border: 1px solid #eaeaea; }
+            .dropdown-menu a { color: #222 !important; padding: 10px 14px !important; text-decoration: none; display: block; text-align: left; font-size: 11px !important; border-bottom: 1px solid #f9f9f9; text-transform: capitalize !important; }
             .dropdown-menu a:last-child { border-bottom: none; }
-            .dropdown:hover .dropdown-menu {
-                display: block; /* Reveals categories smoothly on tap/hover */
-            }
-            .dropdown-toggle::after {
-                content: ' ▼';
-                font-size: 8px;
-                vertical-align: middle;
-            }
-
-            /* Banner Fix: Scale down height and keep subjects fully visible */
-            .hero {
-                min-height: 280px !important;
-                padding: 40px 5% !important;
-                background-position: center center !important;
-            }
-            .hero h1 {
-                font-size: 26px !important;
-            }
-            .hero p {
-                font-size: 14px !important;
-            }
-
-            /* Quick-Nav Menu Fix: Disable stickiness entirely on mobile devices */
-            .cat-menu {
-                position: relative !important; /* Forces it to scroll naturally instead of staying stuck */
-                top: 0 !important;
-                padding: 15px 3% !important;
-                gap: 8px !important;
-            }
-            .cat-btn {
-                font-size: 10px !important;
-                padding: 6px 12px !important;
-                flex: 1 1 40%; /* Grid-style rows of buttons */
-                text-align: center;
-            }
-
-            /* Infinite Scrolling Fix: Compact 2-Column Swipe Grid */
-            .solutions-section {
-                padding: 30px 4% !important;
-            }
-            .solutions-section h2 {
-                font-size: 20px !important;
-                margin-bottom: 25px !important;
-            }
-            .grid-container {
-                display: flex !important;
-                overflow-x: auto !important; /* Activates horizontal touch sliding */
-                scroll-snap-type: x mandatory;
-                gap: 15px !important;
-                padding: 10px 5px 20px !important;
-                -webkit-overflow-scrolling: touch;
-            }
-            
-            /* Compact Card Sizing for Horizontal Slider */
-            .product-card {
-                flex: 0 0 75% !important; /* Shows 1.5 cards on screen so users know to swipe */
-                scroll-snap-align: start;
-                background: var(--white) !important;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
-            }
-            .image-wrapper {
-                height: 160px !important;
-                padding: 10px !important;
-            }
-            .card-details {
-                padding: 14px !important;
-            }
-            .card-details h3 {
-                font-size: 13px !important;
-                min-height: 38px !important;
-            }
-            .card-details p {
-                font-size: 11px !important;
-                margin-bottom: 12px !important;
-                display: -webkit-box;
-                -webkit-line-clamp: 3; /* Truncates long paragraphs into a neat 3-line preview */
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-            }
-            .btn-enquiry {
-                padding: 6px 10px !important;
-                font-size: 10px !important;
-            }
-            .pack-size {
-                font-size: 10px !important;
-            }
+            .dropdown:hover .dropdown-menu { display: block; }
+            .dropdown-toggle::after { content: ' ▼'; font-size: 8px; vertical-align: middle; }
+            .hero { min-height: 280px !important; padding: 40px 5% !important; background-position: center center !important; }
+            .hero h1 { font-size: 26px !important; }
+            .hero p { font-size: 14px !important; }
+            .cat-menu { position: relative !important; top: 0 !important; padding: 15px 3% !important; gap: 8px !important; }
+            .cat-btn { font-size: 10px !important; padding: 6px 12px !important; flex: 1 1 40%; text-align: center; }
+            .grid-container { display: flex !important; overflow-x: auto !important; scroll-snap-type: x mandatory; gap: 15px !important; padding: 10px 5px 20px !important; -webkit-overflow-scrolling: touch; }
+            .product-card { flex: 0 0 75% !important; scroll-snap-align: start; background: var(--white) !important; box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important; }
+            .image-wrapper { height: 160px !important; padding: 10px !important; }
+            .card-details { padding: 14px !important; }
+            .card-details h3 { font-size: 13px !important; min-height: 38px !important; }
+            .card-details p { font-size: 11px !important; margin-bottom: 12px !important; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+            .btn-enquiry { padding: 6px 10px !important; font-size: 10px !important; }
+            .pack-size { font-size: 10px !important; }
         }
     </style>
 </head>
@@ -476,11 +353,11 @@
             </div>
             
             <a href="#about">About Us</a>
-            <a href="#contact">Contact Us</a>
+            <a href="dealers.html">Dealer Network</a>
         </nav>
     </header>
 
-    <!-- Marketing Hero Unit with Custom Background Alignment -->
+    <!-- Marketing Hero Unit -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Transforming Agriculture.<br>Empowering Farmers.</h1>
@@ -517,7 +394,6 @@
             </div>
         </div>
     </section>
-
     <!-- Horizontal Category Shortcuts Bar -->
     <div class="cat-menu">
         <a href="#soluble-fertilizers" class="cat-btn">NPK Soluble</a>
@@ -525,7 +401,9 @@
         <a href="#biostimulants" class="cat-btn">Biostimulants</a>
         <a href="#liquid-fertilizers" class="cat-btn">Liquid Range</a>
         <a href="#protection" class="cat-btn">Crop Protection</a>
+        <a href="dealers.html" class="cat-btn" style="background-color: var(--accent); border-color: var(--accent);">Dealer Network</a>
     </div>
+
     <!-- SECTION 1: WATER SOLUBLE FERTILIZERS -->
     <div class="section-title" id="soluble-fertilizers">
         <h2>Water Soluble NPK Fertilizers</h2>
@@ -534,9 +412,8 @@
     <div class="catalog-container">
         <div class="grid-container">
 
-            <!-- Product 1: Nutri Farm 10:54:10 -->
+            <!-- Product 1 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/10-54-10.png" alt="Nutri Farm 10:54:10" onerror="this.src='logo.png'">
                 </div>
@@ -551,9 +428,8 @@
                 </div>
             </div>
 
-            <!-- Product 2: Nutri Farm 21:21:21 -->
+            <!-- Product 2 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/21-21-21.png" alt="Nutri Farm 21:21:21" onerror="this.src='logo.png'">
                 </div>
@@ -568,9 +444,8 @@
                 </div>
             </div>
 
-            <!-- Product 3: Nutri Farm 23:28:14 -->
+            <!-- Product 3 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/23-28-14.png" alt="Nutri Farm 23:28:14" onerror="this.src='logo.png'">
                 </div>
@@ -584,9 +459,9 @@
                     </div>
                 </div>
             </div>
-            <!-- Product 4: Nutri Farm 10:10:42 -->
+
+            <!-- Product 4 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/10-10-42.png" alt="Nutri Farm 10:10:42" onerror="this.src='logo.png'">
                 </div>
@@ -601,9 +476,8 @@
                 </div>
             </div>
 
-            <!-- Product 5: Nutri Farm 14:48:00 -->
+            <!-- Product 5 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/14-48-00.png" alt="Nutri Farm 14:48:00" onerror="this.src='logo.png'">
                 </div>
@@ -618,9 +492,8 @@
                 </div>
             </div>
 
-            <!-- Product 6: Nutri Farm 18:53:00 -->
+            <!-- Product 6 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/18-53-00.png" alt="Nutri Farm 18:53:00" onerror="this.src='logo.png'">
                 </div>
@@ -634,9 +507,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Product 7: Nutri Farm 00:42:47 + 2.8% Fe -->
+            <!-- Product 7 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/00-42-47.png" alt="Nutri Farm 00:42:47" onerror="this.src='logo.png'">
                 </div>
@@ -646,14 +518,13 @@
                     <p>Combines phosphorus and potassium assets with chelated iron to treat chlorosis patterns under structural stress loops.</p>
                     <div class="card-action-bar">
                         <a href="https://wa.me" target="_blank" class="btn-enquiry">Bulk Enquiry</a>
-                        <div class="pack-size">📦 25_KG</div>
+                        <div class="pack-size">📦 25 KG</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Product 8: Sahara NPK 12:11:18 -->
+            <!-- Product 8 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/12-11-18.png" alt="Sahara NPK 12:11:18" onerror="this.src='logo.png'">
                 </div>
@@ -663,14 +534,13 @@
                     <p>Premium sulfate-based compound built specifically for drip irrigation systems and direct foliar deployment metrics.</p>
                     <div class="card-action-bar">
                         <a href="https://wa.me" target="_blank" class="btn-enquiry">Bulk Enquiry</a>
-                        <div class="pack-size">📦 25_KG</div>
+                        <div class="pack-size">📦 25 KG</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Product 9: Nutri Farm Nitro 21 -->
+            <!-- Product 9 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/nitro-21.png" alt="Nutri Farm Nitro 21" onerror="this.src='logo.png'">
                 </div>
@@ -682,11 +552,11 @@
                         <a href="https://wa.me" target="_blank" class="btn-enquiry">Bulk Enquiry</a>
                         <div class="pack-size">📦 25_KG</div>
                     </div>
-              1  </div>
+                </div>
             </div>
-            <!-- Product 10: Calcium Nitrate with Boron -->
+
+            <!-- Product 10 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/calcium-boron.png" alt="Calcium Nitrate with Boron" onerror="this.src='logo.png'">
                 </div>
@@ -701,9 +571,8 @@
                 </div>
             </div>
 
-            <!-- Product 11: Nutri Farm NPK 30:10:10 -->
+            <!-- Product 11 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/30-10-10.png" alt="Nutri Farm 30:10:10" onerror="this.src='logo.png'">
                 </div>
@@ -713,14 +582,13 @@
                     <p>Concentrated nitrogen baseline optimized for rapid canopy production, healthy leaf volume, and early season growth spurts.</p>
                     <div class="card-action-bar">
                         <a href="https://wa.me" target="_blank" class="btn-enquiry">Bulk Enquiry</a>
-                        <div class="pack-size">📦 25 KG</div>
+                        <div class="pack-size">📦 25_KG</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Product 12: Nutri Farm NPK 00:40:37 -->
+            <!-- Product 12 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/00-40-37.png" alt="Nutri Farm 00:40:37" onerror="this.src='logo.png'">
                 </div>
@@ -730,13 +598,14 @@
                     <p>Phosphate and Potash balance ideal for late flower optimization, fruit anchoring, sugar accumulation, and stalk integrity fields.</p>
                     <div class="card-action-bar">
                         <a href="https://wa.me" target="_blank" class="btn-enquiry">Bulk Enquiry</a>
-                        <div class="pack-size">📦 25_KG</div>
+                        <div class="pack-size">📦 25 KG</div>
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
+
     <!-- SECTION 2: MICRONUTRIENTS & CHELATES -->
     <div class="section-title" id="micronutrients" style="background-color: #f0f4f0; border-top: 1px solid #e2e8e2;">
         <h2>Micronutrients & Chelates</h2>
@@ -745,9 +614,8 @@
     <div class="catalog-container" style="background-color: #f0f4f0;">
         <div class="grid-container">
 
-            <!-- Product 13: Nutri-Mix Combi (Grade II) -->
+            <!-- Product 13 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/nutri-mix-combi.png" alt="Nutri-Mix Combi" onerror="this.src='logo.png'">
                 </div>
@@ -762,9 +630,8 @@
                 </div>
             </div>
 
-            <!-- Product 14: Nutri-Zinc (Zn-EDTA 12%) -->
+            <!-- Product 14 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/nutri-zinc.png" alt="Nutri-Zinc" onerror="this.src='logo.png'">
                 </div>
@@ -779,9 +646,8 @@
                 </div>
             </div>
 
-            <!-- Product 15: Nutri-Ferrous (Fe-EDTA 12%) -->
+            <!-- Product 15 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/nutri-ferrous.png" alt="Nutri-Ferrous" onerror="this.src='logo.png'">
                 </div>
@@ -795,11 +661,10 @@
                     </div>
                 </div>
             </div>
-            <!-- Product 16: Nutri-Boron (B-20%) -->
+            <!-- Product 16 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
-                    <img src="products/nutri-boron.png" alt="Nutri-Boron" onerror="this.src='logo.png'">
+                    <img src="products/nutri-boron.png" alt="Nutri-Boron (B-20%)" onerror="this.src='logo.png'">
                 </div>
                 <div class="card-details">
                     <h3>Nutri-Boron (B-20%)</h3>
@@ -812,11 +677,10 @@
                 </div>
             </div>
 
-            <!-- Product 17: Nutri-EDDHA Ferrous (Fe-6%) -->
+            <!-- Product 17 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
-                    <img src="products/eddha-ferrous.png" alt="Nutri-EDDHA Ferrous" onerror="this.src='logo.png'">
+                    <img src="products/eddha-ferrous.png" alt="Nutri-EDDHA Ferrous (Fe-6%)" onerror="this.src='logo.png'">
                 </div>
                 <div class="card-details">
                     <h3>Nutri-EDDHA Ferrous (Fe-6%)</h3>
@@ -831,6 +695,7 @@
 
         </div>
     </div>
+
     <!-- SECTION 3: BIOSTIMULANTS & GROWTH BOOSTERS -->
     <div class="section-title" id="biostimulants">
         <h2>Biostimulants & Growth Boosters</h2>
@@ -839,9 +704,8 @@
     <div class="catalog-container">
         <div class="grid-container">
 
-            <!-- Product 18: Roxi Bio-Stimulant -->
+            <!-- Product 18 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/roxi.png" alt="Roxi Bio-Stimulant" onerror="this.src='logo.png'">
                 </div>
@@ -856,9 +720,8 @@
                 </div>
             </div>
 
-            <!-- Product 19: Speed Booster -->
+            <!-- Product 19 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/speed-booster.png" alt="Speed Booster" onerror="this.src='logo.png'">
                 </div>
@@ -873,9 +736,8 @@
                 </div>
             </div>
 
-            <!-- Product 20: Nutra Sil Gold -->
+            <!-- Product 20 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/nutra-sil-gold.png" alt="Nutra Sil Gold" onerror="this.src='logo.png'">
                 </div>
@@ -890,9 +752,8 @@
                 </div>
             </div>
 
-            <!-- Product 21: Ai Plus Amino Complex -->
+            <!-- Product 21 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/ai-plus.png" alt="Ai Plus Amino Complex" onerror="this.src='logo.png'">
                 </div>
@@ -907,11 +768,10 @@
                 </div>
             </div>
 
-            <!-- Product 22: Black Pearl Immunity Booster -->
+            <!-- Product 22 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
-                    <img src="products/black-pearl.png" alt="Black Pearl" onerror="this.src='logo.png'">
+                    <img src="products/black-pearl.png" alt="Black Pearl Immunity Booster" onerror="this.src='logo.png'">
                 </div>
                 <div class="card-details">
                     <h3>Black Pearl Immunity Booster</h3>
@@ -934,9 +794,8 @@
     <div class="catalog-container" style="background-color: #f0f4f0;">
         <div class="grid-container">
 
-            <!-- Product 23: Sil-Maxx Suspension -->
+            <!-- Product 23 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/sil-maxx.png" alt="Sil-Maxx Suspension" onerror="this.src='logo.png'">
                 </div>
@@ -951,9 +810,8 @@
                 </div>
             </div>
 
-            <!-- Product 24: Oxi-Z SC Fluid -->
+            <!-- Product 24 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/oxi-z.png" alt="Oxi-Z SC Fluid" onerror="this.src='logo.png'">
                 </div>
@@ -968,9 +826,8 @@
                 </div>
             </div>
 
-            <!-- Product 25: Potosulf Concentrate -->
+            <!-- Product 25 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/potosulf.png" alt="Potosulf Concentrate" onerror="this.src='logo.png'">
                 </div>
@@ -985,9 +842,8 @@
                 </div>
             </div>
 
-            <!-- Product 26: Calox Fluid -->
+            <!-- Product 26 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/calox.png" alt="Calox Fluid" onerror="this.src='logo.png'">
                 </div>
@@ -1012,9 +868,8 @@
     <div class="catalog-container">
         <div class="grid-container">
 
-            <!-- Product 27: Iminil Insecticide -->
+            <!-- Product 27 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/iminil.png" alt="Iminil Insecticide" onerror="this.src='logo.png'">
                 </div>
@@ -1029,9 +884,8 @@
                 </div>
             </div>
 
-            <!-- Product 28: Trable Insecticide -->
+            <!-- Product 28 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/trable.png" alt="Trable Insecticide" onerror="this.src='logo.png'">
                 </div>
@@ -1046,9 +900,8 @@
                 </div>
             </div>
 
-            <!-- Product 29: Nipper Fungicide -->
+            <!-- Product 29 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/nipper.png" alt="Nipper Fungicide" onerror="this.src='logo.png'">
                 </div>
@@ -1063,9 +916,8 @@
                 </div>
             </div>
 
-            <!-- Product 30: Axiss Fungicide -->
+            <!-- Product 30 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/axiss.png" alt="Axiss Fungicide" onerror="this.src='logo.png'">
                 </div>
@@ -1080,9 +932,8 @@
                 </div>
             </div>
 
-            <!-- Product 31: Sweaper Power Herbicide -->
+            <!-- Product 31 -->
             <div class="product-card">
-                <div class="badge-orange">Bulk Enquiry</div>
                 <div class="image-wrapper">
                     <img src="products/sweaper-power.png" alt="Sweaper Power Herbicide" onerror="this.src='logo.png'">
                 </div>
