@@ -51,8 +51,18 @@
         .filter-row label { font-size: 12px; font-weight: 800; text-transform: uppercase; color: var(--primary); letter-spacing: 0.5px; }
         .filter-row select { padding: 10px 18px; font-size: 13px; font-weight: 700; border-radius: 4px; border: 1px solid #cbd5e1; background-color: var(--white); min-width: 250px; text-transform: uppercase; outline: none; cursor: pointer; }
 
-        /* Secure Google My Maps Display Frame Container */
-        .map-wrapper-box { width: 100%; height: 460px; border-radius: 6px; overflow: hidden; border: 1px solid #cbd5e1; margin-bottom: 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
+                /* Patched Widescreen Centered Google My Maps Frame */
+        .map-wrapper-box { 
+            width: 100%; 
+            max-width: 1200px; /* Aligns edges cleanly with the table lists */
+            margin: 0 auto 35px; /* Symmetrically centers the element box on the screen layout canvas */
+            height: 480px; 
+            border-radius: 6px; 
+            overflow: hidden; 
+            border: 1px solid #cbd5e1; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04); 
+            display: block; /* Overrides inline text behavior defaults */
+        }
         
         /* Structured Table Ledger Layout Framework */
         .table-wrapper { width: 100%; overflow-x: auto; border: 1px solid #e2e8e2; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
