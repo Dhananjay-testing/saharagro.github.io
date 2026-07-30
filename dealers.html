@@ -51,17 +51,27 @@
         .filter-row label { font-size: 12px; font-weight: 800; text-transform: uppercase; color: var(--primary); letter-spacing: 0.5px; }
         .filter-row select { padding: 10px 18px; font-size: 13px; font-weight: 700; border-radius: 4px; border: 1px solid #cbd5e1; background-color: var(--white); min-width: 250px; text-transform: uppercase; outline: none; cursor: pointer; }
 
-                /* Patched Widescreen Centered Google My Maps Frame */
+        /* Patched Widescreen Centered Google My Maps Frame */
         .map-wrapper-box { 
             width: 100%; 
-            max-width: 1200px; /* Aligns edges cleanly with the table lists */
-            margin: 0 auto 35px; /* Symmetrically centers the element box on the screen layout canvas */
+            max-width: 1200px;
+            margin: 0 auto 35px;
             height: 480px; 
             border-radius: 6px; 
-            overflow: hidden; 
+            overflow: hidden; /* This hides the cut-off black header piece completely */
             border: 1px solid #cbd5e1; 
             box-shadow: 0 4px 15px rgba(0,0,0,0.04); 
-            display: block; /* Overrides inline text behavior defaults */
+            position: relative; /* Essential reference coordinate anchor for the absolute frame mapping layout */
+        }
+
+        /* Forces Google My Maps to stretch full width and cuts off the title bar */
+        .map-wrapper-box iframe {
+            width: 100% !important;
+            height: 540px !important; /* Made taller to pull the map down */
+            position: absolute;
+            top: -55px; /* Pushes the black title header bar up and out of the hidden overflow zone */
+            left: 0;
+            border: 0;
         }
         
         /* Structured Table Ledger Layout Framework */
@@ -132,7 +142,7 @@
         </div>
         <!-- Google My Maps Deployment Container Frame with Live Embed Link -->
         <div class="map-wrapper-box">
-            <iframe src="https://www.google.com/maps/d/embed?mid=1gdG5PWIinJ3sFIAItzyGKEHpehY_Sa0&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1gdG5PWIinJ3sFIAItzyGKEHpehY_Sa0&ehbc=2E312F&noprof=1" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
         <!-- Structured Enterprise Ledger Table Area -->
