@@ -1,0 +1,34 @@
+[
+ {
+ "name": "Shetkari Krushi Seva Kendra",
+ "address": "A/P Sonai, Tal- Newasa, Dist- Ahilyanagar.",
+ "mapLink": "https://goo.gl",
+ "district": "ahmednagar",
+ "pinCode": "414105",
+ "mobile": "9995551114"
+ },
+ {
+ "name": "Nath Krushi Seva Kendra",
+ "address": "Ganeshwadi Rd, Sonai, Maharashtra",
+ "mapLink": "https://goo.gl",
+ "district": "ahmednagar",
+ "pinCode": "414105",
+ "mobile": "5554444777"
+ },
+ {
+ "name": "GHODESHAWARI KRUSHI SEVA KENDRA",
+ "address": "Sonai - Ghodegaon Rd, Ghodegaon, Maharashtra",
+ "mapLink": "https://goo.gl",
+ "district": "ahmednagar",
+ "pinCode": "414607",
+ "mobile": "544445"
+ },
+ {
+ "name": "Shri Swami Samartha Krushi Seva kendra",
+ "address": "Bhimashankar - Manchar Rd, Ghodegaon, Maharashtra",
+ "mapLink": "https://goo.gl",
+ "district": "ahmednagar",
+ "pinCode": "412408",
+ "mobile": "9995551114"
+ }
+]
