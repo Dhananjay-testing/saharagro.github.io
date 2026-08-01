@@ -238,7 +238,8 @@
  // Global Variable to cache master dealer information arrays securely
  let masterDealersData = [];
  // Core Initializer Engine: Pulls active data structure directly from central JSON array file
- window.addEventListener("DOMContentLoaded", () => {
+// Core Initializer Engine: Pulls active data structure directly from central JSON array file
+window.addEventListener("DOMContentLoaded", () => {
  fetch("dealers.json")
  .then(response => {
  if (!response.ok) { throw new Error("Database file missing or inaccessible"); }
@@ -252,7 +253,7 @@
  console.error("Error loading dealer directory:", error);
  document.getElementById("portalTableBody").innerHTML = `<tr><td colspan="7" style="text-align:center; color:red; font-weight:bold; padding:20px;">Unable to load dealer database. Please try refreshing.</td></tr>`;
  });
- });
+});
  // Controller Logic: Coordinates simultaneous element alterations upon menu interaction
  function handleDistrictChange() {
  const selectedDistrict = document.getElementById("districtSelector").value;
@@ -278,6 +279,7 @@
  const filteredData = masterDealersData.filter(dealer => {
  return districtFilter === "all" || dealer.district.toLowerCase() === districtFilter.toLowerCase();
  });
+
 
  if (filteredData.length === 0) {
  tableBody.innerHTML = `<tr><td colspan="7" style="text-align:center; color:#666; font-style:italic; padding:25px;">No authorized stockists registered in this district area currently.</td></tr>`;
