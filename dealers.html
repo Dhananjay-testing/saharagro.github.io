@@ -287,15 +287,16 @@ window.addEventListener("DOMContentLoaded", () => {
  }
 
  filteredData.forEach(dealer => {
+ const cleanMobile = String(dealer.mobile || '').replace(/[^0-9]/g, '');
  const rowHTML = `
  <tr class="dealer-row">
- <td style="font-weight:700; text-transform:uppercase; color:#111;">${dealer.name}</td>
- <td style="color:#555; text-transform:uppercase;">${dealer.address}</td>
+ <td style="font-weight:700; text-transform:uppercase; color:#111;">${dealer.name || ''}</td>
+ <td style="color:#555; text-transform:uppercase;">${dealer.address || ''}</td>
  <td style="text-align:center;"><a href="${dealer.mapLink || 'https://google.com'}" target="_blank" class="route-link">📍 View Location</a></td>
- <td style="text-align:center; font-weight:600; text-transform:uppercase; color:#444;">${dealer.district}</td>
- <td style="text-align:center; font-weight:bold; color:#666;">${dealer.pinCode}</td>
- <td style="text-align:center; font-weight:bold; color:var(--primary);"><a href="tel:${dealer.mobile}" style="color:inherit; text-decoration:none;">${dealer.mobile}</a></td>
- <td style="text-align:center;"><a href="https://wa.me{dealer.mobile.replace(/[^0-9]/g, '')}" target="_blank" class="connect-btn">WhatsApp</a></td>
+ <td style="text-align:center; font-weight:600; text-transform:uppercase; color:#444;">${dealer.district || ''}</td>
+ <td style="text-align:center; font-weight:bold; color:#666;">${dealer.pinCode || ''}</td>
+ <td style="text-align:center; font-weight:bold; color:var(--primary);"><a href="tel:${cleanMobile}" style="color:inherit; text-decoration:none;">${dealer.mobile || ''}</a></td>
+ <td style="text-align:center;"><a href="https://wa.me{cleanMobile}" target="_blank" class="connect-btn">WhatsApp</a></td>
  </tr>
  `;
  tableBody.insertAdjacentHTML("beforeend", rowHTML);
