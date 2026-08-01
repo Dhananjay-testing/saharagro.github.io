@@ -237,23 +237,65 @@
 
  // Global Variable to cache master dealer information arrays securely
  let masterDealersData = [];
- // Core Initializer Engine: Pulls active data structure directly from central JSON array file
-// Core Initializer Engine: Pulls active data structure directly from central JSON array file
-window.addEventListener("DOMContentLoaded", () => {
- fetch("dealers.json")
+ 
+  // Live Auto-Updating Google Sheets Initializer Engine
+ window.addEventListener("DOMContentLoaded", () => {
+ // PASTE YOUR PUBLIC GOOGLE SHEET CSV EXPORT LINK STREAM INSIDE THE QUOTES BELOW:
+ const googleSheetCsvUrl = "https://google.com";
+
+ fetch(googleSheetCsvUrl)
  .then(response => {
- if (!response.ok) { throw new Error("Database file missing or inaccessible"); }
- return response.json();
+ if (!response.ok) { throw new Error("Google Sheets stream connection rejected"); }
+ return response.text(); // Extracts raw data streams directly from Google's online cloud drive
  })
- .then(data => {
- masterDealersData = data;
- renderDealersTable("all"); // Render all active records during initial webpage compilation
+ .then(csvText => {
+ masterDealersData = parseGoogleSheetCsv(csvText);
+ renderDealersTable("all"); // Build table layout during system setup compilation
  })
  .catch(error => {
- console.error("Error loading dealer directory:", error);
- document.getElementById("portalTableBody").innerHTML = `<tr><td colspan="7" style="text-align:center; color:red; font-weight:bold; padding:20px;">Unable to load dealer database. Please try refreshing.</td></tr>`;
+ console.error("Google Sheets synchronization error:", error);
+ document.getElementById("portalTableBody").innerHTML = `<tr><td colspan="7" style="text-align:center; color:red; font-weight:bold; padding:20px;">Database sync timeout. Please try refreshing.</td></tr>`;
  });
-});
+ });
+
+ // Custom Google Sheets CSV Text Parser Engine
+ function parseGoogleSheetCsv(text) {
+ const lines = text.split(/\r?\n/).filter(line => line.trim() !== "");
+ if (lines.length < 2) return [];
+
+ const headers = lines[0].split(',').map(h => h.trim().replace(/^["']|["']$/g, ""));
+ const records = [];
+
+ for (let i = 1; i < lines.length; i++) {
+ const row = lines[i];
+ const matches = [];
+ let insideQuote = false;
+ let entries = "";
+
+ for (let j = 0; j < row.length; j++) {
+ const char = row[j];
+ if (char === '"' || char === "'") {
+ insideQuote = !insideQuote;
+ } else if (char === ',' && !insideQuote) {
+ matches.push(entries.trim().replace(/^["']|["']$/g, "").replace(/\r/g, ""));
+ entries = "";
+ } else {
+ entries += char;
+ }
+ }
+ matches.push(entries.trim().replace(/^["']|["']$/g, "").replace(/\r/g, ""));
+
+ if (matches.length === headers.length) {
+ let obj = {};
+ headers.forEach((header, index) => {
+ obj[header] = matches[index];
+ });
+ records.push(obj);
+ }
+ }
+ return records;
+ }
+  
  // Controller Logic: Coordinates simultaneous element alterations upon menu interaction
  function handleDistrictChange() {
  const selectedDistrict = document.getElementById("districtSelector").value;
