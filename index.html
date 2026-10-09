@@ -71,6 +71,10 @@
             color: var(--accent);
         }
 
+        .language-toggle { display: inline-flex; gap: 2px; padding: 3px; border: 1px solid #d8e1d8; border-radius: 999px; background: #f4f7f4; }
+        .language-toggle button { border: 0; border-radius: 999px; padding: 7px 10px; background: transparent; color: var(--primary); font-size: 12px; font-weight: 700; cursor: pointer; }
+        .language-toggle button[aria-pressed="true"] { background: var(--primary); color: white; }
+
         /* Desktop Dropdown Framework */
         .dropdown {
             position: relative;
@@ -354,6 +358,10 @@
             
             <a href="#about">About Us</a>
             <a href="dealers.html">Dealer Network</a>
+            <div class="language-toggle" role="group" aria-label="Choose language">
+                <button type="button" data-language="en" aria-pressed="true">EN</button>
+                <button type="button" data-language="mr" aria-pressed="false">मराठी</button>
+            </div>
         </nav>
     </header>
 
@@ -991,5 +999,6 @@
         </div>
     </footer>
 
+    <script src="i18n.js"></script>
 </body>
 </html>

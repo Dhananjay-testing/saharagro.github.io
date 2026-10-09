@@ -31,6 +31,9 @@
  nav { display: flex; align-items: center; gap: 24px; }
  nav a { text-decoration: none; color: #444444; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
  nav a:hover { color: var(--accent); }
+ .language-toggle { display: inline-flex; gap: 2px; padding: 3px; border: 1px solid #d8e1d8; border-radius: 999px; background: #f4f7f4; }
+ .language-toggle button { border: 0; border-radius: 999px; padding: 7px 10px; background: transparent; color: var(--primary); font-size: 12px; font-weight: 700; cursor: pointer; }
+ .language-toggle button[aria-pressed="true"] { background: var(--primary); color: white; }
  /* Integrated Navigation Header Dropdown Mechanics */
  .dropdown { position: relative; display: inline-block; }
  .dropdown-toggle::after { content: ' ▼'; font-size: 9px; color: #888; }
@@ -115,6 +118,10 @@
  </div>
  <a href="index.html#about">About Us</a>
  <a href="dealers.html" style="color: var(--accent);">Dealer Network</a>
+ <div class="language-toggle" role="group" aria-label="Choose language">
+ <button type="button" data-language="en" aria-pressed="true">EN</button>
+ <button type="button" data-language="mr" aria-pressed="false">मराठी</button>
+ </div>
  </nav>
  </header>
  <main class="portal-workspace">
@@ -345,5 +352,6 @@
  });
  }
  </script>
+<script src="i18n.js"></script>
 </body>
 </html>
