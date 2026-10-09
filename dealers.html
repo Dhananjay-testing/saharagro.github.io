@@ -93,7 +93,8 @@
  
  /* Smartphone Mobile Navigation Override System Rules */
  @media screen and (max-width: 768px) {
- header { padding: 12px 5% !important; flex-wrap: wrap; }
+ header { position: relative; padding: 12px 5% !important; flex-wrap: wrap; }
+ header .language-toggle { position: absolute; top: 18px; right: 5%; z-index: 1001; }
  header nav { display: flex !important; width: 100%; justify-content: space-around; margin-top: 10px; border-top: 1px solid #f0f0f0; padding-top: 10px; gap: 5px; }
  nav a { font-size: 11px !important; padding: 5px 8px; color: #333 !important; text-transform: capitalize !important; margin-left: 0 !important; }
  .dropdown-menu { min-width: 160px; }
