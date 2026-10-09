@@ -33,7 +33,7 @@
         "Tebuconazole 50% + Trifloxystrobin 25% WG": "टेब्युकोनॅझोल ५०% + ट्रायफ्लॉक्सीस्ट्रोबिन २५% WG",
         "Azoxystrobin 11% + Tebuconazole 18.3% SC": "अ‍ॅझॉक्सीस्ट्रोबिन ११% + टेब्युकोनॅझोल १८.३% SC",
         "Glufosinate Ammonium 13.5% w/w SL": "ग्लुफोसिनेट अमोनियम १३.५% w/w SL",
-        "Bulk Enquiry": "मोठ्या प्रमाणातील चौकशी",
+        "Enquiry": "चौकशी",
         "Optimized formula to catalyze robust root architectures, early shoot initialization, and energy routing systems.": "मजबूत मुळांची वाढ, सुरुवातीच्या फुटव्यांची निर्मिती आणि वनस्पतीतील ऊर्जा वहनासाठी अनुकूलित सूत्र.",
         "Provides fully uniform, equalized ratios of essential primary macronutrients during standard vegetative cycles.": "वनस्पतीच्या वाढीच्या टप्प्यात आवश्यक मुख्य अन्नद्रव्यांचे सम प्रमाणात पोषण करते.",
         "Specialized compound balancing dual nitrogen pipelines with standard phosphate payloads for development spikes.": "पीकवाढीच्या महत्त्वाच्या टप्प्यांसाठी नायट्रोजन आणि फॉस्फेटचे संतुलित मिश्रण.",
