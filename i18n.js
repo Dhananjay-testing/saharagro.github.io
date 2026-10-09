@@ -74,6 +74,13 @@
         "Authorized Retailer & Stockist Network": "अधिकृत विक्रेता आणि वितरक नेटवर्क", "Filter Partners By District Area:": "जिल्ह्यानुसार विक्रेते निवडा:",
         "Show All Districts": "सर्व जिल्हे दाखवा", "Dealer Name": "विक्रेत्याचे नाव", "Dealer Address": "विक्रेत्याचा पत्ता",
         "View Map": "नकाशा पहा", "District": "जिल्हा", "PIN Code": "पिन कोड", "Dealer Mobile Number": "विक्रेत्याचा मोबाइल क्रमांक", "Connect": "संपर्क",
+        "Ahilyanagar": "अहिल्यानगर", "Akola": "अकोला", "Amravati": "अमरावती", "Beed": "बीड", "Bhandara": "भंडारा",
+        "Buldhana": "बुलढाणा", "Chandrapur": "चंद्रपूर", "Chhatrapati Sambhajinagar": "छत्रपती संभाजीनगर", "Dharashiv": "धाराशिव",
+        "Dhule": "धुळे", "Gadchiroli": "गडचिरोली", "Gondia": "गोंदिया", "Hingoli": "हिंगोली", "Jalgaon": "जळगाव", "Jalna": "जालना",
+        "Kolhapur": "कोल्हापूर", "Latur": "लातूर", "Mumbai City": "मुंबई शहर", "Mumbai Suburban": "मुंबई उपनगर", "Nagpur": "नागपूर",
+        "Nanded": "नांदेड", "Nandurbar": "नंदुरबार", "Nashik": "नाशिक", "Palghar": "पालघर", "Parbhani": "परभणी", "Pune": "पुणे",
+        "Raigad": "रायगड", "Ratnagiri": "रत्नागिरी", "Sangli": "सांगली", "Satara": "सातारा", "Sindhudurg": "सिंधुदुर्ग",
+        "Solapur": "सोलापूर", "Thane": "ठाणे", "Wardha": "वर्धा", "Washim": "वाशिम", "Yavatmal": "यवतमाळ",
         "📍 View Location": "📍 ठिकाण पहा", "WhatsApp": "व्हॉट्सॲप", "No authorized stockists registered in this district area currently.": "या जिल्ह्यात सध्या कोणतेही अधिकृत विक्रेते नोंदणीकृत नाहीत."
     };
 
