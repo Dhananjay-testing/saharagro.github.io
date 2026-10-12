@@ -2,7 +2,7 @@
     const translations = {
         "Home": "मुख्यपृष्ठ", "Products": "उत्पादने", "NPK Soluble Fertilizers": "पाण्यात विरघळणारी NPK खते",
         "Gallery": "गॅलरी", "Photos": "फोटो", "Videos": "व्हिडिओ", "Photos and videos from Sahara Agro": "सहारा अ‍ॅग्रोचे फोटो आणि व्हिडिओ",
-        "Growing Together": "एकत्र प्रगतीकडे", "Farmer Training Session": "शेतकरी प्रशिक्षण सत्र", "Farmer Field Visit": "शेतातील भेट", "Farmer Meeting": "शेतकरी बैठक",
+        "Growing Together": "एकत्र प्रगतीकडे", "Farmer Training Session": "शेतकरी प्रशिक्षण सत्र", "Farmer Field Visit": "शेतातील भेट", "Farmer Meeting": "शेतकरी बैठक", "Sahara Agro Video": "सहारा अ‍ॅग्रोचा व्हिडिओ",
         "Videos coming soon": "व्हिडिओ लवकरच उपलब्ध होतील", "Videos will appear here when added to the gallery.": "गॅलरीमध्ये जोडलेले व्हिडिओ येथे दिसतील.",
         "Micronutrients & Chelates": "सूक्ष्म अन्नद्रव्ये आणि चिलेट्स", "Biostimulants & Boosters": "जैवउत्तेजक आणि वाढवर्धक",
         "Liquid Range": "द्रवरूप उत्पादने", "Crop Protection Range": "पीक संरक्षण उत्पादने", "About Us": "आमच्याबद्दल",

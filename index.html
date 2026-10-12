@@ -309,6 +309,7 @@
         .gallery-item img { display: block; width: 100%; height: 230px; object-fit: cover; transition: transform .25s ease; }
         .gallery-item.gallery-product img { object-fit: contain; padding: 16px; background: white; }
         .gallery-item video { display: block; width: 100%; height: 230px; object-fit: cover; background: #102b20; }
+        .gallery-item iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; background: #102b20; }
         .gallery-item:hover img { transform: scale(1.03); }
         .gallery-item figcaption { padding: 12px 14px; color: var(--primary); font-size: 13px; font-weight: 700; }
         .gallery-empty { grid-column: 1 / -1; padding: 42px 20px; border: 1px dashed #b9c9b9; border-radius: 8px; color: #526252; text-align: center; }
@@ -1024,6 +1025,10 @@
             <figure class="gallery-item gallery-product" data-gallery-type="photo">
                 <img src="products/roxi.png" alt="Roxi Bio-Stimulant product pack" loading="lazy">
                 <figcaption>Roxi Bio-Stimulant</figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-type="video">
+                <iframe src="https://drive.google.com/file/d/1zOenP4_wOvVrgXVtMTVnO7Txy6MLfzKd/preview" title="Sahara Agro video" loading="lazy" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <figcaption>Sahara Agro Video</figcaption>
             </figure>
             <div class="gallery-empty" data-gallery-empty="video" hidden>
                 <strong>Videos coming soon</strong>
