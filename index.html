@@ -299,6 +299,21 @@
         .btn-enquiry:hover { background-color: #0b1a29; }
         .pack-size { font-size: 11px; color: #666; font-weight: bold; }
 
+        .gallery-section { padding: 0 6% 60px; background: var(--white); }
+        .gallery-filters { display: flex; justify-content: center; gap: 10px; margin: 0 auto 24px; }
+        .gallery-filter { border: 1px solid #d9e2d9; border-radius: 999px; padding: 9px 20px; background: white; color: var(--primary); font-size: 13px; font-weight: 700; cursor: pointer; }
+        .gallery-filter[aria-pressed="true"] { background: var(--primary); border-color: var(--primary); color: white; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+        .gallery-item { margin: 0; overflow: hidden; border-radius: 8px; background: var(--bg-light); border: 1px solid #e2e8e2; box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+        .gallery-item[hidden], .gallery-empty[hidden] { display: none; }
+        .gallery-item img { display: block; width: 100%; height: 230px; object-fit: cover; transition: transform .25s ease; }
+        .gallery-item.gallery-product img { object-fit: contain; padding: 16px; background: white; }
+        .gallery-item video { display: block; width: 100%; height: 230px; object-fit: cover; background: #102b20; }
+        .gallery-item:hover img { transform: scale(1.03); }
+        .gallery-item figcaption { padding: 12px 14px; color: var(--primary); font-size: 13px; font-weight: 700; }
+        .gallery-empty { grid-column: 1 / -1; padding: 42px 20px; border: 1px dashed #b9c9b9; border-radius: 8px; color: #526252; text-align: center; }
+        .gallery-empty strong { display: block; margin-bottom: 6px; color: var(--primary); font-size: 17px; }
+
         .cta-ribbon { background-color: var(--secondary); color: var(--white); padding: 40px 6%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
         .cta-ribbon h2 { font-size: 20px; font-weight: 700; text-transform: uppercase; }
         .cta-ribbon p { font-size: 13px; opacity: 0.8; margin-top: 4px; }
@@ -332,6 +347,10 @@
             .card-details p { font-size: 11px !important; margin-bottom: 12px !important; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
             .btn-enquiry { padding: 6px 10px !important; font-size: 10px !important; }
             .pack-size { font-size: 10px !important; }
+            .gallery-section { padding: 0 5% 45px; }
+            .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+            .gallery-item img { height: 160px; }
+            .gallery-item figcaption { padding: 10px; font-size: 11px; }
         }
 
         html[lang="mr"] * { font-family: "Nirmala UI", "Noto Sans Devanagari", Mangal, sans-serif !important; }
@@ -360,6 +379,7 @@
             </div>
             
             <a href="#about">About Us</a>
+            <a href="#gallery">Gallery</a>
             <a href="dealers.html">Dealer Network</a>
             <div class="language-toggle" role="group" aria-label="Choose language">
                 <button type="button" data-language="en" aria-pressed="true">EN</button>
@@ -412,6 +432,7 @@
         <a href="#biostimulants" class="cat-btn">Biostimulants</a>
         <a href="#liquid-fertilizers" class="cat-btn">Liquid Range</a>
         <a href="#protection" class="cat-btn">Crop Protection</a>
+        <a href="#gallery" class="cat-btn">Gallery</a>
         <a href="dealers.html" class="cat-btn" style="background-color: var(--accent); border-color: var(--accent);">Dealer Network</a>
     </div>
 
@@ -961,6 +982,44 @@
 
         </div>
     </div>
+    <!-- Photo and Video Gallery -->
+    <section id="gallery" class="section-title">
+        <h2>Gallery</h2>
+        <p>Photos and videos from Sahara Agro</p>
+    </section>
+    <section class="gallery-section" aria-label="Photo and video gallery">
+        <div class="gallery-filters" role="group" aria-label="Gallery media type">
+            <button class="gallery-filter" type="button" data-gallery-filter="photo" aria-pressed="true">Photos</button>
+            <button class="gallery-filter" type="button" data-gallery-filter="video" aria-pressed="false">Videos</button>
+        </div>
+        <div class="gallery-grid">
+            <figure class="gallery-item" data-gallery-type="photo">
+                <img src="banner.jpg" alt="Farmers standing together in a green field" loading="lazy">
+                <figcaption>Growing Together</figcaption>
+            </figure>
+            <figure class="gallery-item gallery-product" data-gallery-type="photo">
+                <img src="products/10-54-10.png" alt="Nutri Farm 10:54:10 + TE fertilizer pack" loading="lazy">
+                <figcaption>Nutri Farm 10:54:10 + TE</figcaption>
+            </figure>
+            <figure class="gallery-item gallery-product" data-gallery-type="photo">
+                <img src="products/21-21-21.png" alt="Nutri Farm 21:21:21 + TE fertilizer pack" loading="lazy">
+                <figcaption>Nutri Farm 21:21:21 + TE</figcaption>
+            </figure>
+            <figure class="gallery-item gallery-product" data-gallery-type="photo">
+                <img src="products/23-28-14.png" alt="Nutri Farm 23:28:14 + TE fertilizer pack" loading="lazy">
+                <figcaption>Nutri Farm 23:28:14 + TE</figcaption>
+            </figure>
+            <figure class="gallery-item gallery-product" data-gallery-type="photo">
+                <img src="products/roxi.png" alt="Roxi Bio-Stimulant product pack" loading="lazy">
+                <figcaption>Roxi Bio-Stimulant</figcaption>
+            </figure>
+            <div class="gallery-empty" data-gallery-empty="video" hidden>
+                <strong>Videos coming soon</strong>
+                <span>Videos will appear here when added to the gallery.</span>
+            </div>
+        </div>
+    </section>
+
     <!-- Distributor Network Ribbon -->
     <section id="network" class="cta-ribbon">
         <div>
@@ -1002,6 +1061,22 @@
         </div>
     </footer>
 
+    <script>
+        document.querySelectorAll("[data-gallery-filter]").forEach(button => {
+            button.addEventListener("click", () => {
+                const type = button.dataset.galleryFilter;
+                document.querySelectorAll("[data-gallery-filter]").forEach(filter => filter.setAttribute("aria-pressed", String(filter === button)));
+                const items = document.querySelectorAll(".gallery-item");
+                let hasMedia = false;
+                items.forEach(item => {
+                    item.hidden = item.dataset.galleryType !== type;
+                    if (!item.hidden) hasMedia = true;
+                });
+                const empty = document.querySelector("[data-gallery-empty]");
+                if (empty) empty.hidden = type !== "video" || hasMedia;
+            });
+        });
+    </script>
     <script src="i18n.js"></script>
 </body>
 </html>
